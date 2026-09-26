@@ -15,11 +15,13 @@ authors:
     orcid: "https://orcid.org/0000-0003-2488-0578"
 abstract: >-
   Raw experimental outputs (CSV and JSON) and publication figures (PDF and
-  PNG) of the AutoFL paper: primary benchmark across 4 strategies and 4
+  PNG) of the AutoFL paper: primary benchmark across 5 strategies and 4
   frameworks; non-DL extension; cross-provider validation (Claude, Gemini
   2.5 Flash, Llama 3 8B); FL convergence traces; non-IID partition results
   with centralized baseline; hardware sweep; exemplar-correction runs.
-  v2.0 adds the reruns behind the resubmission and keeps the v1.0 files
+  v2.0 adds the corrected reruns and the resubmission experiments
+  (template baseline, self-repair, prompt ablation, repeated sampling,
+  frozen expansion benchmark, differential tests) and keeps the v1.0 files
   unchanged.
 keywords:
   - federated learning
