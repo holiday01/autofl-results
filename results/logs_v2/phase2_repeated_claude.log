@@ -1,0 +1,1014 @@
+[repeated] provider=claude methods=['structured', 'few_shot_corrected'] samples=5 scripts=10 -> 100 generations; dry_run=False max_calls=None
+  Preflight [eval-client]: PASS  (18.9s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+[repeated] provider=claude methods=['structured', 'few_shot_corrected'] samples=5 scripts=10 -> 100 generations; dry_run=False max_calls=None
+  Preflight [eval-client]: PASS  (5.8s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=99.9667  steps=11250  n=45000  1013.28s
+  Aggregated loss: 99.9667  (1014.27s)
+
+FL training complete.
+  dcgan_main                          structured         s0 -> PASS  [-1/-1 tok, $nan]
+  Preflight [eval-client]: PASS  (4.3s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.7636  steps=11250  n=45000  1014.52s
+  Aggregated loss: 1.7636  (1015.06s)
+
+FL training complete.
+  dcgan_main                          structured         s1 -> PASS  [14252/8741 tok, $0.1354]
+  Preflight [eval-client]: PASS  (5.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.6539  steps=11250  n=45000  952.61s
+  Aggregated loss: 1.6539  (953.23s)
+
+FL training complete.
+  dcgan_main                          structured         s2 -> PASS  [14252/12596 tok, $0.1932]
+  Preflight [eval-client]: PASS  (4.9s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.6411  steps=11250  n=45000  993.66s
+  Aggregated loss: 1.6411  (994.36s)
+
+FL training complete.
+  dcgan_main                          structured         s3 -> PASS  [14252/10796 tok, $0.1662]
+  Preflight [eval-client]: PASS  (4.8s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+/home/holiday01/.pyenv/versions/3.11.9/lib/python3.11/site-packages/torch/utils/data/dataloader.py:775: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+    [eval-site-1] loss=99.9675  steps=11250  n=45000  1023.75s
+  Aggregated loss: 99.9675  (1024.35s)
+
+FL training complete.
+  dcgan_main                          structured         s4 -> PASS  [14252/11125 tok, $0.1712]
+  Preflight [eval-client]: PASS  (3.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=3.2351  steps=250  n=1000  23.5s
+  Aggregated loss: 3.2351  (23.52s)
+
+FL training complete.
+  dcgan_main                          few_shot_corrected s0 -> PASS  [21988/8953 tok, $0.1835]
+  Preflight [eval-client]: FAIL at [forward_pass]  (3.0s)
+    Error: RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+  dcgan_main                          few_shot_corrected s1 -> preflight/forward_pass  [21988/8526 tok, $0.1345]
+  Preflight [eval-client]: FAIL at [forward_pass]  (2.9s)
+    Error: TypeError: 'NoneType' object is not subscriptable
+  dcgan_main                          few_shot_corrected s2 -> preflight/forward_pass  [21988/11246 tok, $0.1753]
+  Preflight [eval-client]: FAIL at [forward_pass]  (3.0s)
+    Error: TypeError: 'NoneType' object is not subscriptable
+  dcgan_main                          few_shot_corrected s3 -> preflight/forward_pass  [21456/8617 tok, $0.1753]
+  Preflight [eval-client]: FAIL at [forward_pass]  (3.0s)
+    Error: RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+  dcgan_main                          few_shot_corrected s4 -> preflight/forward_pass  [21988/8789 tok, $0.1384]
+  Preflight [eval-client]: FAIL at [data_load]  (3.2s)
+    Error: FileNotFoundError: Found no valid file for the classes .claude, FashionMNIST, MNIST, __pycache__, _snapshots, _synthetic, benchmarks, cifar-10-batches-py, cifar10, config, converter, data, eval, examples, fl_results, fl_runtime, hardware, preflight, tests, zenodo_v2. Supported extensions are: .jpg, .jpeg, .png, .ppm, .bmp, .pgm, .tif, .tiff, .webp
+  imagenet_main                       structured         s0 -> preflight/data_load  [16737/8560 tok, $0.1781]
+  Preflight [eval-client]: PASS  (3.6s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=7.3302  steps=200  n=800  46.52s
+  Aggregated loss: 7.3302  (46.57s)
+
+FL training complete.
+  imagenet_main                       structured         s1 -> PASS  [16737/9942 tok, $0.1542]
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for mnist_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for mnist_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+/home/holiday01/.pyenv/versions/3.11.9/lib/python3.11/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+  Preflight [eval-client]: PASS  (2.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3065  steps=12000  n=48000  80.36s
+  Aggregated loss: 0.3065  (80.41s)
+
+FL training complete.
+  mnist_main                          structured         s2 -> PASS  [12323/2434 tok, $0.1104]
+  Preflight [eval-client]: PASS  (2.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3137  steps=12000  n=48000  74.95s
+  Aggregated loss: 0.3137  (75.0s)
+
+FL training complete.
+  mnist_main                          structured         s3 -> PASS  [12323/1665 tok, $0.0287]
+  Preflight [eval-client]: PASS  (2.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3174  steps=12000  n=48000  86.41s
+  Aggregated loss: 0.3174  (86.45s)
+
+FL training complete.
+  mnist_main                          structured         s4 -> PASS  [73129/3036 tok, $0.4843]
+  Preflight [eval-client]: PASS  (2.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3158  steps=13500  n=54000  92.73s
+  Aggregated loss: 0.3158  (92.77s)
+
+FL training complete.
+  mnist_main                          few_shot_corrected s0 -> PASS  [20059/1369 tok, $0.0582]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2933  steps=13500  n=54000  94.55s
+  Aggregated loss: 0.2933  (94.59s)
+
+FL training complete.
+  mnist_main                          few_shot_corrected s1 -> PASS  [20059/1302 tok, $0.0256]
+  Preflight [eval-client]: PASS  (2.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3094  steps=13500  n=54000  85.26s
+  Aggregated loss: 0.3094  (85.31s)
+
+FL training complete.
+  mnist_main                          few_shot_corrected s2 -> PASS  [20059/1360 tok, $0.0264]
+  Preflight [eval-client]: PASS  (2.6s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3043  steps=13500  n=54000  98.92s
+  Aggregated loss: 0.3043  (98.96s)
+
+FL training complete.
+  mnist_main                          few_shot_corrected s3 -> PASS  [80674/1584 tok, $0.0796]
+  Preflight [eval-client]: PASS  (2.5s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3086  steps=13500  n=54000  100.26s
+  Aggregated loss: 0.3086  (100.3s)
+
+FL training complete.
+  mnist_main                          few_shot_corrected s4 -> PASS  [80865/1516 tok, $0.0797]
+  Preflight [eval-client]: PASS  (3.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7315  steps=52  n=205  17.89s
+  Aggregated loss: 0.7315  (17.93s)
+
+FL training complete.
+  image_classification_from_scratch   structured         s0 -> PASS  [13475/16956 tok, $0.2845]
+  Preflight [eval-client]: PASS  (4.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7627  steps=40  n=160  18.84s
+  Aggregated loss: 0.7627  (18.9s)
+
+FL training complete.
+  image_classification_from_scratch   structured         s1 -> PASS  [13475/13176 tok, $0.2017]
+  Preflight [eval-client]: PASS  (3.7s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7323  steps=40  n=160  18.56s
+  Aggregated loss: 0.7323  (18.63s)
+
+FL training complete.
+  image_classification_from_scratch   structured         s2 -> PASS  [11233/14360 tok, $0.2419]
+  Preflight [eval-client]: PASS  (3.9s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7330  steps=52  n=205  23.8s
+  Aggregated loss: 0.7330  (23.87s)
+
+FL training complete.
+  image_classification_from_scratch   structured         s3 -> PASS  [13475/10999 tok, $0.1690]
+  Preflight [eval-client]: PASS  (3.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7151  steps=40  n=160  15.75s
+  Aggregated loss: 0.7151  (15.81s)
+
+FL training complete.
+  image_classification_from_scratch   structured         s4 -> PASS  [74281/16221 tok, $0.2928]
+  Preflight [eval-client]: FAIL at [data_load]  (2.3s)
+    Error: FileNotFoundError: Found no valid file for the classes .claude, FashionMNIST, MNIST, __pycache__, _snapshots, _synthetic, benchmarks, cifar-10-batches-py, cifar10, config, converter, data, eval, examples, fl_results, fl_runtime, hardware, preflight, tests, zenodo_v2. Supported extensions are: .jpg, .jpeg, .png, .ppm, .bmp, .pgm, .tif, .tiff, .webp
+  image_classification_from_scratch   few_shot_corrected s0 -> preflight/data_load  [21211/4849 tok, $0.1173]
+  Preflight [eval-client]: FAIL at [data_load]  (2.0s)
+    Error: FileNotFoundError: Found no valid file for the classes .claude, FashionMNIST, MNIST, __pycache__, _snapshots, _synthetic, benchmarks, cifar-10-batches-py, cifar10, config, converter, data, eval, examples, fl_results, fl_runtime, hardware, preflight, tests, zenodo_v2. Supported extensions are: .jpg, .jpeg, .png, .ppm, .bmp, .pgm, .tif, .tiff, .webp
+  image_classification_from_scratch   few_shot_corrected s1 -> preflight/data_load  [21211/7045 tok, $0.1120]
+  Preflight [eval-client]: FAIL at [data_load]  (1.9s)
+    Error: FileNotFoundError: Found no valid file for the classes .claude, FashionMNIST, MNIST, __pycache__, _snapshots, _synthetic, benchmarks, cifar-10-batches-py, cifar10, config, converter, data, eval, examples, fl_results, fl_runtime, hardware, preflight, tests, zenodo_v2. Supported extensions are: .jpg, .jpeg, .png, .ppm, .bmp, .pgm, .tif, .tiff, .webp
+  image_classification_from_scratch   few_shot_corrected s2 -> preflight/data_load  [21211/5421 tok, $0.0877]
+  Preflight [eval-client]: PASS  (2.9s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7635  steps=40  n=160  11.73s
+  Aggregated loss: 0.7635  (11.74s)
+
+FL training complete.
+  image_classification_from_scratch   few_shot_corrected s3 -> PASS  [21211/9768 tok, $0.1529]
+  Preflight [eval-client]: FAIL at [data_load]  (2.1s)
+    Error: FileNotFoundError: Found no valid file for the classes .claude, FashionMNIST, MNIST, __pycache__, _snapshots, _synthetic, benchmarks, cifar-10-batches-py, cifar10, config, converter, data, eval, examples, fl_results, fl_runtime, hardware, preflight, tests, zenodo_v2. Supported extensions are: .jpg, .jpeg, .png, .ppm, .bmp, .pgm, .tif, .tiff, .webp
+  image_classification_from_scratch   few_shot_corrected s4 -> preflight/data_load  [21211/8039 tok, $0.1270]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.5332  steps=2000  n=8000  12.99s
+  Aggregated loss: 4.5332  (12.99s)
+
+FL training complete.
+  lstm_seq2seq                        structured         s0 -> PASS  [13669/12802 tok, $0.2234]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.4692  steps=52  n=205  0.34s
+  Aggregated loss: 4.4692  (0.36s)
+
+FL training complete.
+  lstm_seq2seq                        structured         s1 -> PASS  [13669/9076 tok, $0.1402]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.1514  steps=40  n=160  0.17s
+  Aggregated loss: 0.1514  (0.17s)
+
+FL training complete.
+  lstm_seq2seq                        structured         s2 -> PASS  [13669/6768 tok, $0.1056]
+  Preflight [eval-client]: PASS  (2.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.5355  steps=2000  n=8000  10.32s
+  Aggregated loss: 4.5355  (10.61s)
+
+FL training complete.
+  lstm_seq2seq                        structured         s3 -> PASS  [13669/6937 tok, $0.1082]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=336.4960  steps=40  n=160  0.26s
+  Aggregated loss: 336.4960  (0.27s)
+
+FL training complete.
+  lstm_seq2seq                        structured         s4 -> PASS  [13669/10462 tok, $0.1610]
+  Preflight [eval-client]: FAIL at [forward_pass]  (2.9s)
+    Error: TypeError: Seq2SeqLSTM.__init__() missing 2 required positional arguments: 'num_encoder_tokens' and 'num_decoder_tokens'
+  lstm_seq2seq                        few_shot_corrected s0 -> preflight/forward_pass  [82211/7796 tok, $0.1820]
+  Preflight [eval-client]: FAIL at [forward_pass]  (1.2s)
+    Error: TypeError: Seq2SeqModel.__init__() missing 2 required positional arguments: 'num_encoder_tokens' and 'num_decoder_tokens'
+  lstm_seq2seq                        few_shot_corrected s1 -> preflight/forward_pass  [21405/9206 tok, $0.1838]
+  Preflight [eval-client]: PASS  (1.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.5336  steps=40  n=160  0.18s
+  Aggregated loss: 4.5336  (0.18s)
+
+FL training complete.
+  lstm_seq2seq                        few_shot_corrected s2 -> PASS  [21405/7721 tok, $0.1222]
+  Preflight [eval-client]: FAIL at [forward_pass]  (1.2s)
+    Error: TypeError: Seq2SeqLSTM.__init__() missing 2 required positional arguments: 'num_encoder_tokens' and 'num_decoder_tokens'
+  lstm_seq2seq                        few_shot_corrected s3 -> preflight/forward_pass  [82211/5691 tok, $0.1100]
+  Preflight [eval-client]: FAIL at [data_load]  (1.1s)
+    Error: IsADirectoryError: [Errno 21] Is a directory: '.'
+  lstm_seq2seq                        few_shot_corrected s4 -> preflight/data_load  [21405/6543 tok, $0.1046]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2291  steps=13500  n=54000  19.1s
+  Aggregated loss: 0.2291  (19.12s)
+
+FL training complete.
+  mnist_convnet                       structured         s0 -> PASS  [11335/5071 tok, $0.0934]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2010  steps=13500  n=54000  18.22s
+  Aggregated loss: 0.2010  (18.24s)
+
+FL training complete.
+  mnist_convnet                       structured         s1 -> PASS  [11335/4116 tok, $0.0651]
+  Preflight [eval-client]: FAIL at [import_check]  (0.1s)
+    Error: ModuleNotFoundError: No module named 'keras'
+<frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+  mnist_convnet                       structured         s2 -> preflight/import_check  [11335/5398 tok, $0.0844]
+  Preflight [eval-client]: PASS  (1.3s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2526  steps=13500  n=54000  19.47s
+  Aggregated loss: 0.2526  (19.49s)
+
+FL training complete.
+  mnist_convnet                       structured         s3 -> PASS  [11335/5888 tok, $0.0917]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2124  steps=13500  n=54000  19.89s
+  Aggregated loss: 0.2124  (19.9s)
+
+FL training complete.
+  mnist_convnet                       structured         s4 -> PASS  [11335/5065 tok, $0.0794]
+  Preflight [eval-client]: PASS  (2.5s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2226  steps=13500  n=54000  22.42s
+  Aggregated loss: 0.2226  (22.45s)
+
+FL training complete.
+  mnist_convnet                       few_shot_corrected s0 -> PASS  [19071/3028 tok, $0.0771]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2117  steps=13500  n=54000  20.37s
+  Aggregated loss: 0.2117  (20.39s)
+
+FL training complete.
+  mnist_convnet                       few_shot_corrected s1 -> PASS  [19071/3652 tok, $0.0605]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2234  steps=13500  n=54000  19.59s
+  Aggregated loss: 0.2234  (19.61s)
+
+FL training complete.
+  mnist_convnet                       few_shot_corrected s2 -> PASS  [19071/1844 tok, $0.0334]
+  Preflight [eval-client]: PASS  (1.6s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2049  steps=13500  n=54000  17.68s
+  Aggregated loss: 0.2049  (17.75s)
+
+FL training complete.
+  mnist_convnet                       few_shot_corrected s3 -> PASS  [19071/1594 tok, $0.0296]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2116  steps=13500  n=54000  19.37s
+  Aggregated loss: 0.2116  (19.38s)
+
+FL training complete.
+  mnist_convnet                       few_shot_corrected s4 -> PASS  [79877/3800 tok, $0.1080]
+WARNING:root:No 'labels' key found in config; defaulting to all-zero labels. Supply config['labels'] for meaningful training.
+WARNING:root:No 'labels' key found in config; defaulting to all-zero labels. Supply config['labels'] for meaningful training.
+WARNING:root:No 'labels' key found in config; defaulting to all-zero labels. Supply config['labels'] for meaningful training.
+WARNING:root:No 'labels' key found in config; defaulting to all-zero labels. Supply config['labels'] for meaningful training.
+  Preflight [eval-client]: PASS  (14.8s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.0428  steps=32  n=128  77.24s
+  Aggregated loss: 0.0428  (77.29s)
+
+FL training complete.
+  mednist_tutorial                    structured         s0 -> PASS  [73470/8626 tok, $0.1740]
+  Preflight [eval-client]: PASS  (12.7s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+WARNING:root:Real data unavailable — using SYNTHETIC random data (allow_synthetic_data=True).
+WARNING:root:Real data unavailable — using SYNTHETIC random data (allow_synthetic_data=True).
+WARNING:root:Real data unavailable — using SYNTHETIC random data (allow_synthetic_data=True).
+WARNING:root:Real data unavailable — using SYNTHETIC random data (allow_synthetic_data=True).
+    [eval-site-1] loss=0.0619  steps=32  n=128  82.07s
+  Aggregated loss: 0.0619  (82.13s)
+
+FL training complete.
+  mednist_tutorial                    structured         s1 -> PASS  [12664/9485 tok, $0.1676]
+  Preflight [eval-client]: FAIL at [data_load]  (5.1s)
+    Error: FileNotFoundError: Found 80 NIfTI file(s) in '.' but no labels file. Provide 'labels.npy' (1-D int64 array aligned with the sorted file list) or 'labels.csv' (col index 1 = int label).
+  mednist_tutorial                    structured         s2 -> preflight/data_load  [12664/13296 tok, $0.2032]
+  Preflight [eval-client]: PASS  (10.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7961  steps=4  n=16  8.9s
+  Aggregated loss: 0.7961  (8.97s)
+
+FL training complete.
+  mednist_tutorial                    structured         s3 -> PASS  [73470/8844 tok, $0.1547]
+  Preflight [eval-client]: PASS  (11.5s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.8084  steps=4  n=16  8.12s
+  Aggregated loss: 0.8084  (8.17s)
+
+FL training complete.
+  mednist_tutorial                    structured         s4 -> PASS  [12664/8484 tok, $0.1311]
+  Preflight [eval-client]: FAIL at [data_load]  (5.2s)
+    Error: FileNotFoundError: No such file or no access: 'IXI253-HH-1694-T1.nii.gz'
+  mednist_tutorial                    few_shot_corrected s0 -> preflight/data_load  [20400/2101 tok, $0.0712]
+  Preflight [eval-client]: FAIL at [forward_pass]  (6.0s)
+    Error: IndexError: Target 7 is out of bounds.
+  mednist_tutorial                    few_shot_corrected s1 -> preflight/forward_pass  [20400/2323 tok, $0.0410]
+  Preflight [eval-client]: FAIL at [forward_pass]  (6.0s)
+    Error: IndexError: Target 7 is out of bounds.
+  mednist_tutorial                    few_shot_corrected s2 -> preflight/forward_pass  [20400/2135 tok, $0.0382]
+  Preflight [eval-client]: FAIL at [data_load]  (5.3s)
+    Error: ValueError: config must contain 'image_files' (list of paths) and 'labels' (list of ints)
+  mednist_tutorial                    few_shot_corrected s3 -> preflight/data_load  [20400/1383 tok, $0.0269]
+  Preflight [eval-client]: FAIL at [data_load]  (5.1s)
+    Error: ValueError: config must contain 'image_files' (list of paths) and 'labels' (list of int).
+  mednist_tutorial                    few_shot_corrected s4 -> preflight/data_load  [20400/1490 tok, $0.0285]
+  Preflight [eval-client]: PASS  (17.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.4961  steps=8  n=128  31.98s
+  Aggregated loss: 0.4961  (32.01s)
+
+FL training complete.
+  spleen_segmentation_3d              structured         s0 -> PASS  [73868/11545 tok, $0.2202]
+  Preflight [eval-client]: PASS  (17.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5368  steps=8  n=128  32.09s
+  Aggregated loss: 0.5368  (32.12s)
+
+FL training complete.
+  spleen_segmentation_3d              structured         s1 -> PASS  [13062/8130 tok, $0.1496]
+  Preflight [eval-client]: PASS  (17.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5481  steps=8  n=128  32.83s
+  Aggregated loss: 0.5481  (32.85s)
+
+FL training complete.
+  spleen_segmentation_3d              structured         s2 -> PASS  [13062/7990 tok, $0.1238]
+  Preflight [eval-client]: PASS  (18.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5430  steps=8  n=128  31.83s
+  Aggregated loss: 0.5430  (31.86s)
+
+FL training complete.
+  spleen_segmentation_3d              structured         s3 -> PASS  [13062/9988 tok, $0.1537]
+  Preflight [eval-client]: PASS  (18.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.4982  steps=8  n=128  32.39s
+  Aggregated loss: 0.4982  (32.42s)
+
+FL training complete.
+  spleen_segmentation_3d              structured         s4 -> PASS  [13062/9211 tok, $0.1421]
+  Preflight [eval-client]: PASS  (15.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5250  steps=5  n=80  20.87s
+  Aggregated loss: 0.5250  (20.88s)
+
+FL training complete.
+  spleen_segmentation_3d              few_shot_corrected s0 -> PASS  [81604/2250 tok, $0.0952]
+  Preflight [eval-client]: PASS  (15.5s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5919  steps=8  n=128  33.4s
+  Aggregated loss: 0.5919  (33.41s)
+
+FL training complete.
+  spleen_segmentation_3d              few_shot_corrected s1 -> PASS  [81413/4583 tok, $0.1290]
+  Preflight [eval-client]: PASS  (15.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5028  steps=8  n=128  34.13s
+  Aggregated loss: 0.5028  (34.15s)
+
+FL training complete.
+  spleen_segmentation_3d              few_shot_corrected s2 -> PASS  [20798/2289 tok, $0.0764]
+  Preflight [eval-client]: PASS  (15.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5602  steps=8  n=128  32.74s
+  Aggregated loss: 0.5602  (32.75s)
+
+FL training complete.
+  spleen_segmentation_3d              few_shot_corrected s3 -> PASS  [81604/2391 tok, $0.0604]
+  Preflight [eval-client]: PASS  (15.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5369  steps=8  n=128  32.43s
+  Aggregated loss: 0.5369  (32.44s)
+
+FL training complete.
+  spleen_segmentation_3d              few_shot_corrected s4 -> PASS  [20798/1804 tok, $0.0333]
+  Preflight [eval-client]: FAIL at [import_check]  (1.2s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           structured         s0 -> preflight/import_check  [12042/4422 tok, $0.0879]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           structured         s1 -> preflight/import_check  [12042/5290 tok, $0.0830]
+  Preflight [eval-client]: FAIL at [import_check]  (1.2s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           structured         s2 -> preflight/import_check  [12042/5993 tok, $0.0935]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           structured         s3 -> preflight/import_check  [12042/5930 tok, $0.0926]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           structured         s4 -> preflight/import_check  [12042/6002 tok, $0.0936]
+  Preflight [eval-client]: PASS  (1.3s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.3448  steps=13750  n=55000  9.7s
+  Aggregated loss: 1.3448  (9.71s)
+
+FL training complete.
+  backbone_image_classifier           few_shot_corrected s0 -> PASS  [19778/1205 tok, $0.0540]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=2.0787  steps=13750  n=55000  12.74s
+  Aggregated loss: 2.0787  (12.76s)
+
+FL training complete.
+  backbone_image_classifier           few_shot_corrected s1 -> PASS  [80584/3338 tok, $0.1054]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.7739  steps=13750  n=55000  9.99s
+  Aggregated loss: 1.7739  (10.01s)
+
+FL training complete.
+  backbone_image_classifier           few_shot_corrected s2 -> PASS  [19778/2746 tok, $0.0471]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.1397  steps=13750  n=55000  9.49s
+  Aggregated loss: 1.1397  (9.51s)
+
+FL training complete.
+  backbone_image_classifier           few_shot_corrected s3 -> PASS  [80584/1414 tok, $0.0454]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.3378  steps=13750  n=55000  9.51s
+  Aggregated loss: 1.3378  (9.53s)
+
+FL training complete.
+  backbone_image_classifier           few_shot_corrected s4 -> PASS  [19778/1208 tok, $0.0241]
+  Preflight [eval-client]: PASS  (2.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0041  steps=13500  n=54000  95.04s
+  Aggregated loss: 1.0041  (95.06s)
+
+FL training complete.
+  mnist_lite                          structured         s0 -> PASS  [12970/10297 tok, $0.1816]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0044  steps=13500  n=54000  85.72s
+  Aggregated loss: 1.0044  (85.74s)
+
+FL training complete.
+  mnist_lite                          structured         s1 -> PASS  [73585/11807 tok, $0.2224]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0062  steps=13500  n=54000  81.95s
+  Aggregated loss: 1.0062  (81.97s)
+
+FL training complete.
+  mnist_lite                          structured         s2 -> PASS  [12970/5326 tok, $0.0838]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0093  steps=12000  n=48000  64.09s
+  Aggregated loss: 1.0093  (64.11s)
+
+FL training complete.
+  mnist_lite                          structured         s3 -> PASS  [73776/7011 tok, $0.1516]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0049  steps=13500  n=54000  71.97s
+  Aggregated loss: 1.0049  (71.99s)
+
+FL training complete.
+  mnist_lite                          structured         s4 -> PASS  [12970/6061 tok, $0.0948]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0039  steps=13500  n=54000  73.33s
+  Aggregated loss: 1.0039  (73.35s)
+
+FL training complete.
+  mnist_lite                          few_shot_corrected s0 -> PASS  [20706/6026 tok, $0.1319]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0013  steps=13500  n=54000  76.56s
+  Aggregated loss: 1.0013  (76.57s)
+
+FL training complete.
+  mnist_lite                          few_shot_corrected s1 -> PASS  [20706/5593 tok, $0.0901]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0035  steps=13500  n=54000  76.26s
+  Aggregated loss: 1.0035  (76.28s)
+
+FL training complete.
+  mnist_lite                          few_shot_corrected s2 -> PASS  [20706/5191 tok, $0.0841]
+  Preflight [eval-client]: FAIL at [forward_pass]  (2.0s)
+    Error: TypeError: cannot unpack non-iterable NoneType object
+  mnist_lite                          few_shot_corrected s3 -> preflight/forward_pass  [20706/6563 tok, $0.1047]
+  Preflight [eval-client]: PASS  (2.3s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0008  steps=13500  n=54000  80.74s
+  Aggregated loss: 1.0008  (80.76s)
+
+FL training complete.
+  mnist_lite                          few_shot_corrected s4 -> PASS  [20706/5677 tok, $0.0914]
+[repeated] done. live calls: 99. rows -> results/repeated_claude.csv
+[repeated] provider=claude methods=['structured', 'few_shot_corrected'] samples=5 scripts=10 -> 100 generations; dry_run=False max_calls=None
+  dcgan_main                          structured         s0 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          structured         s1 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          structured         s2 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          structured         s3 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          structured         s4 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          few_shot_corrected s0 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          few_shot_corrected s1 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  dcgan_main                          few_shot_corrected s2 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  dcgan_main                          few_shot_corrected s3 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  dcgan_main                          few_shot_corrected s4 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  imagenet_main                       structured         s0 -> preflight/data_load  [-1/-1 tok, $nan]
+  imagenet_main                       structured         s1 -> PASS  [-1/-1 tok, $nan]
+  imagenet_main                       structured         s2 -> PASS  [16737/9566 tok, $0.1932]
+  imagenet_main                       structured         s3 -> PASS  [16737/10376 tok, $0.1607]
+  imagenet_main                       structured         s4 -> preflight/data_load  [16737/9958 tok, $0.1544]
+  imagenet_main                       few_shot_corrected s0 -> preflight/data_load  [85279/1800 tok, $0.1105]
+  imagenet_main                       few_shot_corrected s1 -> preflight/data_load  [24473/1600 tok, $0.0881]
+  imagenet_main                       few_shot_corrected s2 -> preflight/data_load  [24473/1901 tok, $0.0359]
+  imagenet_main                       few_shot_corrected s3 -> preflight/data_load  [24473/1461 tok, $0.0293]
+  imagenet_main                       few_shot_corrected s4 -> preflight/data_load  [24473/1470 tok, $0.0294]
+  mnist_main                          structured         s0 -> PASS  [12323/2812 tok, $0.0654]
+  mnist_main                          structured         s1 -> PASS  [12323/2367 tok, $0.0392]
+  mnist_main                          structured         s2 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          structured         s3 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          structured         s4 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          few_shot_corrected s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          few_shot_corrected s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          few_shot_corrected s2 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          few_shot_corrected s3 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          few_shot_corrected s4 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   structured         s0 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   structured         s1 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   structured         s2 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   structured         s3 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   structured         s4 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   few_shot_corrected s0 -> preflight/data_load  [-1/-1 tok, $nan]
+  image_classification_from_scratch   few_shot_corrected s1 -> preflight/data_load  [-1/-1 tok, $nan]
+  image_classification_from_scratch   few_shot_corrected s2 -> preflight/data_load  [-1/-1 tok, $nan]
+  image_classification_from_scratch   few_shot_corrected s3 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   few_shot_corrected s4 -> preflight/data_load  [-1/-1 tok, $nan]
+  lstm_seq2seq                        structured         s0 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        structured         s1 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        structured         s2 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        structured         s3 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        structured         s4 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        few_shot_corrected s0 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  lstm_seq2seq                        few_shot_corrected s1 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  lstm_seq2seq                        few_shot_corrected s2 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        few_shot_corrected s3 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  lstm_seq2seq                        few_shot_corrected s4 -> preflight/data_load  [-1/-1 tok, $nan]
+  mnist_convnet                       structured         s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       structured         s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       structured         s2 -> preflight/import_check  [-1/-1 tok, $nan]
+  mnist_convnet                       structured         s3 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       structured         s4 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       few_shot_corrected s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       few_shot_corrected s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       few_shot_corrected s2 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       few_shot_corrected s3 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       few_shot_corrected s4 -> PASS  [-1/-1 tok, $nan]
+  mednist_tutorial                    structured         s0 -> PASS  [-1/-1 tok, $nan]
+  mednist_tutorial                    structured         s1 -> PASS  [-1/-1 tok, $nan]
+  mednist_tutorial                    structured         s2 -> preflight/data_load  [-1/-1 tok, $nan]
+  mednist_tutorial                    structured         s3 -> PASS  [-1/-1 tok, $nan]
+  mednist_tutorial                    structured         s4 -> PASS  [-1/-1 tok, $nan]
+  mednist_tutorial                    few_shot_corrected s0 -> preflight/data_load  [-1/-1 tok, $nan]
+  mednist_tutorial                    few_shot_corrected s1 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mednist_tutorial                    few_shot_corrected s2 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mednist_tutorial                    few_shot_corrected s3 -> preflight/data_load  [-1/-1 tok, $nan]
+  mednist_tutorial                    few_shot_corrected s4 -> preflight/data_load  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              structured         s0 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              structured         s1 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              structured         s2 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              structured         s3 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              structured         s4 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              few_shot_corrected s0 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              few_shot_corrected s1 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              few_shot_corrected s2 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              few_shot_corrected s3 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              few_shot_corrected s4 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           structured         s0 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           structured         s1 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           structured         s2 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           structured         s3 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           structured         s4 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           few_shot_corrected s0 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           few_shot_corrected s1 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           few_shot_corrected s2 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           few_shot_corrected s3 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           few_shot_corrected s4 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          structured         s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          structured         s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          structured         s2 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          structured         s3 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          structured         s4 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          few_shot_corrected s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          few_shot_corrected s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          few_shot_corrected s2 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          few_shot_corrected s3 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mnist_lite                          few_shot_corrected s4 -> PASS  [-1/-1 tok, $nan]
+[repeated] done. live calls: 10. rows -> results/repeated_claude.csv

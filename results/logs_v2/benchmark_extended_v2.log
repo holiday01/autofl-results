@@ -1,0 +1,97 @@
+Provider: claude  |  Regenerate: False  |  Cached-only: True  |  data_root='.'  |  strict=False
+Running 3 scripts × 4 methods = 12 evaluations
+Output: results/benchmark_extended_v2.csv
+
+Script: sklearn/mlp_digits.py
+  [ast]   [converter] mlp_digits.py → mlp_digits_fl_ast.py
+    model_class   : (not found)
+    dataset_class : (not found)
+    optimizer     : AdamW
+    loss_calls    : []
+  Preflight [eval-client]: FAIL at [data_load]  (1.9s)
+    Error: NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+interface  coverage=1.00  1.93s
+  [zero_shot]   Preflight [eval-client]: FAIL at [forward_pass]  (1.4s)
+    Error: AttributeError: 'NoneType' object has no attribute 'zero_grad'
+interface  coverage=1.00  1.43s
+  [few_shot]   Preflight [eval-client]: FAIL at [backward_pass]  (1.8s)
+    Error: RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+interface  coverage=1.00  1.83s
+  [structured]   Preflight [eval-client]: PASS  (1.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.8063  steps=360  n=1438  0.17s
+  Aggregated loss: 0.8063  (0.18s)
+
+FL training complete.
+OK  coverage=1.00  1.62s
+Script: sklearn/svm_iris.py
+  [ast]   [converter] svm_iris.py → svm_iris_fl_ast.py
+    model_class   : (not found)
+    dataset_class : (not found)
+    optimizer     : AdamW
+    loss_calls    : []
+  Preflight [eval-client]: FAIL at [data_load]  (1.5s)
+    Error: NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+interface  coverage=1.00  1.51s
+  [zero_shot]   Preflight [eval-client]: FAIL at [forward_pass]  (0.6s)
+    Error: AttributeError: 'SGDClassifier' object has no attribute 'to'
+interface  coverage=1.00  0.6s
+  [few_shot]   Preflight [eval-client]: FAIL at [forward_pass]  (1.4s)
+    Error: AttributeError: 'SVC' object has no attribute 'to'
+interface  coverage=1.00  1.38s
+  [structured]   Preflight [eval-client]: PASS  (1.5s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7965  steps=30  n=120  0.02s
+  Aggregated loss: 0.7965  (0.02s)
+
+FL training complete.
+OK  coverage=1.00  1.51s
+Script: xgboost/xgb_breast_cancer.py
+  [ast]   [converter] xgb_breast_cancer.py → xgb_breast_cancer_fl_ast.py
+    model_class   : (not found)
+    dataset_class : (not found)
+    optimizer     : AdamW
+    loss_calls    : []
+  Preflight [eval-client]: FAIL at [data_load]  (1.5s)
+    Error: NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+interface  coverage=1.00  1.47s
+  [zero_shot]   Preflight [eval-client]: FAIL at [forward_pass]  (0.6s)
+    Error: AttributeError: 'XGBClassifier' object has no attribute 'to'
+interface  coverage=1.00  0.61s
+  [few_shot]   Preflight [eval-client]: FAIL at [forward_pass]  (1.4s)
+    Error: AttributeError: 'XGBClassifier' object has no attribute 'to'
+interface  coverage=1.00  1.4s
+  [structured]   Preflight [eval-client]: PASS  (1.5s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5657  steps=114  n=456  0.1s
+  Aggregated loss: 0.5657  (0.11s)
+
+FL training complete.
+OK  coverage=1.00  1.64s
+
+Saved 12 rows (12 new) → results/benchmark_extended_v2.csv
+
+=== Summary [claude]: e2e_runnable rate ===
+                      ast           zero_shot     few_shot      structured  
+  sklearn             0% ( 2)      0% ( 2)      0% ( 2)      100% ( 2)    
+  xgboost             0% ( 1)      0% ( 1)      0% ( 1)      100% ( 1)    
+
+=== Summary [claude]: component_coverage (mean) ===
+                      ast           zero_shot     few_shot      structured  
+  sklearn             1.00            1.00            1.00            1.00          
+  xgboost             1.00            1.00            1.00            1.00          

@@ -1,0 +1,182 @@
+script_name,framework,method,provider,syntax_valid,interface_complete,build_model_present,build_dataloader_present,train_step_present,optimizer_detected,component_coverage,preflight_pass,e2e_runnable,error_stage,error_message,elapsed_sec,data_path,data_path_exists,strict_data,spec_version,dataset_class,dataset_len
+dcgan_main,pytorch,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 2",1.96,.,True,False,,,-1
+dcgan_main,pytorch,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"KeyError: 'dataset'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 233, in _stage_data_load
+    dl = mod.build_dataloader(self.config, split=""train"")
+         ^^^^",1.45,.,True,False,v1,,-1
+dcgan_main,pytorch,few_shot,claude,True,True,True,True,True,True,1.0,True,True,,,33.79,.,True,False,v1,FakeData,1000
+dcgan_main,pytorch,structured,claude,True,True,True,True,True,True,1.0,True,True,,,743.36,.,True,False,v1,CIFAR10,50000
+imagenet_main,pytorch,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 2",1.35,.,True,False,,,-1
+imagenet_main,pytorch,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"FileNotFoundError: [Errno 2] No such file or directory: 'imagenet/train'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 233, in _stage_data_load
+    dl = mod.build",1.34,.,True,False,v1,,-1
+imagenet_main,pytorch,few_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"FileNotFoundError: [Errno 2] No such file or directory: './train'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 233, in _stage_data_load
+    dl = mod.build_datalo",1.36,.,True,False,v1,,-1
+imagenet_main,pytorch,structured,claude,True,True,True,True,True,True,1.0,True,True,,,5.09,.,True,False,v1,TensorDataset,200
+mnist_main,pytorch,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 2",1.34,.,True,False,,,-1
+mnist_main,pytorch,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'NoneType' object has no attribute 'zero_grad'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 254, in _stage_forward_pass
+    loss = mod.train_step",1.48,.,True,False,v1,MNIST,60000
+mnist_main,pytorch,few_shot,claude,True,True,True,True,True,True,1.0,True,True,,,265.82,.,True,False,v1,MNIST,60000
+mnist_main,pytorch,structured,claude,True,True,True,True,True,True,1.0,True,True,,,264.51,.,True,False,v1,MNIST,60000
+image_classification_from_scratch,tensorflow,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/import_check,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""<string>"", line 7, in <module>
+  File ""<frozen importlib._bootstrap_external>"", line 940, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 241, in _call_with_frames_removed
+  File ""/tmp/tmphpmql8vm/ima",0.04,.,True,False,,,-1
+image_classification_from_scratch,tensorflow,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/import_check,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""<string>"", line 7, in <module>
+  File ""<frozen importlib._bootstrap_external>"", line 940, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 241, in _call_with_frames_removed
+  File ""/home/holiday01/auto",0.01,.,True,False,v1,,-1
+image_classification_from_scratch,tensorflow,few_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/import_check,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""<string>"", line 7, in <module>
+  File ""<frozen importlib._bootstrap_external>"", line 940, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 241, in _call_with_frames_removed
+  File ""/home/holiday01/auto",0.04,.,True,False,v1,,-1
+image_classification_from_scratch,tensorflow,structured,claude,True,True,True,True,True,True,1.0,True,True,,,4.85,.,True,False,v1,TensorDataset,200
+lstm_seq2seq,tensorflow,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/import_check,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""<string>"", line 7, in <module>
+  File ""<frozen importlib._bootstrap_external>"", line 940, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 241, in _call_with_frames_removed
+  File ""/tmp/tmphpmql8vm/lst",0.05,.,True,False,,,-1
+lstm_seq2seq,tensorflow,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/import_check,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""<string>"", line 7, in <module>
+  File ""<frozen importlib._bootstrap_external>"", line 940, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 241, in _call_with_frames_removed
+  File ""/home/holiday01/auto",0.04,.,True,False,v1,,-1
+lstm_seq2seq,tensorflow,few_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/import_check,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""<string>"", line 7, in <module>
+  File ""<frozen importlib._bootstrap_external>"", line 940, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 241, in _call_with_frames_removed
+  File ""/home/holiday01/auto",0.04,.,True,False,v1,,-1
+lstm_seq2seq,tensorflow,structured,claude,True,True,True,True,True,True,1.0,True,True,,,1.07,.,True,False,v1,_Seq2SeqDataset,200
+mnist_convnet,tensorflow,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/import_check,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""<string>"", line 7, in <module>
+  File ""<frozen importlib._bootstrap_external>"", line 940, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 241, in _call_with_frames_removed
+  File ""/tmp/tmphpmql8vm/mni",0.04,.,True,False,,,-1
+mnist_convnet,tensorflow,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/import_check,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""<string>"", line 7, in <module>
+  File ""<frozen importlib._bootstrap_external>"", line 940, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 241, in _call_with_frames_removed
+  File ""/home/holiday01/auto",0.04,.,True,False,v1,,-1
+mnist_convnet,tensorflow,few_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/import_check,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""<string>"", line 7, in <module>
+  File ""<frozen importlib._bootstrap_external>"", line 940, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 241, in _call_with_frames_removed
+  File ""/home/holiday01/auto",0.75,.,True,False,v1,,-1
+mnist_convnet,tensorflow,structured,claude,True,True,True,True,True,True,1.0,True,True,,,19.5,.,True,False,v1,MNIST,60000
+mednist_tutorial,monai,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 2",5.75,.,True,False,,,-1
+mednist_tutorial,monai,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File ""/home/holiday01/.pyenv/versions/3.11.9/lib/python3.11/site-packages/nibabel/loadsave.py"", line 104, in load
+    stat_result = os.stat(filename)
+                  ^^^^^^^^^^",3.82,.,True,False,v1,ImageDataset,10
+mednist_tutorial,monai,few_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ValueError: num_samples should be a positive integer value, but got num_samples=0
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 233, in _stage_data_load
+    dl = ",13.84,.,True,False,v1,,-1
+mednist_tutorial,monai,structured,claude,True,True,True,True,True,True,1.0,True,True,,,14.64,.,True,False,v1,_SyntheticMRIDataset,20
+spleen_segmentation_3d,monai,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 2",3.96,.,True,False,,,-1
+spleen_segmentation_3d,monai,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"KeyError: 'data_dir'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 233, in _stage_data_load
+    dl = mod.build_dataloader(self.config, split=""train"")
+         ^^^",3.84,.,True,False,v1,,-1
+spleen_segmentation_3d,monai,few_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/backward_pass,"RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 278, in _stage_backward_pass
+  ",8.84,.,True,False,v1,Dataset,20
+spleen_segmentation_3d,monai,structured,claude,True,True,True,True,True,True,1.0,True,True,,,9.3,.,True,False,v1,_SyntheticSpleenDataset,20
+backbone_image_classifier,lightning,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/import_check,"ModuleNotFoundError: No module named 'lightning'
+Traceback (most recent call last):
+  File ""<string>"", line 7, in <module>
+  File ""<frozen importlib._bootstrap_external>"", line 940, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 241, in _call_with_frames_removed
+  File ""/tmp/tmphpmql8vm",0.79,.,True,False,,,-1
+backbone_image_classifier,lightning,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'NoneType' object has no attribute 'zero_grad'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 254, in _stage_forward_pass
+    loss = mod.train_step",1.42,.,True,False,v1,MNIST,60000
+backbone_image_classifier,lightning,few_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/backward_pass,"RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 278, in _stage_backward_pass
+  ",1.47,.,True,False,v1,MNIST,60000
+backbone_image_classifier,lightning,structured,claude,True,True,True,True,True,True,1.0,True,True,,,11.09,.,True,False,v1,MNIST,60000
+mnist_lite,lightning,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/import_check,"ModuleNotFoundError: No module named 'lightning'
+Traceback (most recent call last):
+  File ""<string>"", line 7, in <module>
+  File ""<frozen importlib._bootstrap_external>"", line 940, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 241, in _call_with_frames_removed
+  File ""/tmp/tmphpmql8vm",0.77,.,True,False,,,-1
+mnist_lite,lightning,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/backward_pass,"RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 278, in _stage_backward_pass
+  ",0.93,.,True,False,v1,MNIST,60000
+mnist_lite,lightning,few_shot,claude,True,True,True,True,True,True,1.0,True,True,,,67.71,.,True,False,v1,MNIST,60000
+mnist_lite,lightning,structured,claude,True,True,True,True,True,True,1.0,True,True,,,53.71,.,True,False,v1,MNIST,60000
+dcgan_main,pytorch,template,none,True,True,True,True,True,True,1.0,True,True,,,481.08,.,True,False,,CIFAR10,50000
+imagenet_main,pytorch,template,none,True,True,True,True,True,True,1.0,True,True,,,11.28,.,True,False,,TensorDataset,111
+mnist_main,pytorch,template,none,True,True,True,True,True,True,1.0,True,True,,,197.52,.,True,False,,MNIST,60000
+image_classification_from_scratch,tensorflow,template,none,True,True,True,True,True,True,1.0,True,True,,,9.08,.,True,False,,TensorDataset,172
+lstm_seq2seq,tensorflow,template,none,True,True,True,True,True,True,1.0,True,True,,,3.42,.,True,False,,TensorDataset,256
+mnist_convnet,tensorflow,template,none,True,True,True,True,True,True,1.0,True,True,,,37.7,.,True,False,,MNIST,60000
+mednist_tutorial,monai,template,none,True,True,True,True,True,True,1.0,True,True,,,37.1,.,True,False,,TensorDataset,18
+spleen_segmentation_3d,monai,template,none,True,True,True,True,True,True,1.0,True,True,,,67.06,.,True,False,,Dataset,20
+backbone_image_classifier,lightning,template,none,True,True,True,True,True,True,1.0,True,True,,,12.36,.,True,False,,MNIST,60000
+mnist_lite,lightning,template,none,True,True,True,True,True,True,1.0,True,True,,,198.46,.,True,False,,MNIST,60000

@@ -1,0 +1,327 @@
+Provider: claude  |  Regenerate: False  |  Cached-only: True  |  data_root='.'  |  strict=False
+Running 10 scripts × 4 methods = 40 evaluations
+Output: results/benchmark_v2.csv
+
+Script: pytorch/dcgan_main.py
+  [ast]   [converter] dcgan_main.py → dcgan_main_fl_ast.py
+    model_class   : Generator
+    dataset_class : (not found)
+    optimizer     : Adam
+    loss_calls    : ['criterion', 'BCELoss']
+  Preflight [eval-client]: FAIL at [data_load]  (1.9s)
+    Error: NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+interface  coverage=1.00  1.96s
+  [zero_shot]   Preflight [eval-client]: FAIL at [data_load]  (1.4s)
+    Error: KeyError: 'dataset'
+interface  coverage=1.00  1.45s
+  [few_shot]   Preflight [eval-client]: PASS  (6.3s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=2.8680  steps=225  n=900  27.31s
+  Aggregated loss: 2.8680  (27.35s)
+
+FL training complete.
+OK  coverage=1.00  33.79s
+  [structured]   Preflight [eval-client]: PASS  (3.7s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=99.9827  steps=11250  n=45000  739.05s
+  Aggregated loss: 99.9827  (739.6s)
+
+FL training complete.
+OK  coverage=1.00  743.36s
+Script: pytorch/imagenet_main.py
+  [ast]   [converter warning] Could not identify model class; guessing 'Summary'
+  [converter] imagenet_main.py → imagenet_main_fl_ast.py
+    model_class   : Summary
+    dataset_class : (not found)
+    optimizer     : SGD
+    loss_calls    : ['criterion', 'CrossEntropyLoss']
+  Preflight [eval-client]: FAIL at [data_load]  (1.4s)
+    Error: NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+interface  coverage=1.00  1.35s
+  [zero_shot]   Preflight [eval-client]: FAIL at [data_load]  (1.3s)
+    Error: FileNotFoundError: [Errno 2] No such file or directory: 'imagenet/train'
+interface  coverage=1.00  1.34s
+  [few_shot]   Preflight [eval-client]: FAIL at [data_load]  (1.4s)
+    Error: FileNotFoundError: [Errno 2] No such file or directory: './train'
+interface  coverage=1.00  1.36s
+  [structured]   Preflight [eval-client]: PASS  (1.9s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=7.8994  steps=45  n=180  2.97s
+  Aggregated loss: 7.8994  (3.1s)
+
+FL training complete.
+OK  coverage=1.00  5.09s
+Script: pytorch/mnist_main.py
+  [ast]   [converter] mnist_main.py → mnist_main_fl_ast.py
+    model_class   : Net
+    dataset_class : (not found)
+    optimizer     : AdamW
+    loss_calls    : ['nll_loss']
+  Preflight [eval-client]: FAIL at [data_load]  (1.3s)
+    Error: NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+interface  coverage=1.00  1.34s
+  [zero_shot]   Preflight [eval-client]: FAIL at [forward_pass]  (1.5s)
+    Error: AttributeError: 'NoneType' object has no attribute 'zero_grad'
+interface  coverage=1.00  1.48s
+  [few_shot]   Preflight [eval-client]: PASS  (1.5s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3087  steps=13500  n=54000  264.25s
+  Aggregated loss: 0.3087  (264.28s)
+
+FL training complete.
+OK  coverage=1.00  265.82s
+  [structured]   Preflight [eval-client]: PASS  (1.6s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2919  steps=13500  n=54000  262.88s
+  Aggregated loss: 0.2919  (262.92s)
+
+FL training complete.
+OK  coverage=1.00  264.51s
+Script: tensorflow/image_classification_from_scratch.py
+  [ast]   [converter] image_classification_from_scratch.py → image_classification_from_scratch_fl_ast.py
+    model_class   : (not found)
+    dataset_class : (not found)
+    optimizer     : Adam
+    loss_calls    : []
+  Preflight [eval-client]: FAIL at [import_check]  (0.0s)
+    Error: ModuleNotFoundError: No module named 'keras'
+interface  coverage=1.00  0.04s
+  [zero_shot]   Preflight [eval-client]: FAIL at [import_check]  (0.0s)
+    Error: ModuleNotFoundError: No module named 'keras'
+interface  coverage=1.00  0.01s
+  [few_shot]   Preflight [eval-client]: FAIL at [import_check]  (0.0s)
+    Error: ModuleNotFoundError: No module named 'keras'
+interface  coverage=1.00  0.04s
+  [structured]   Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7154  steps=40  n=160  3.66s
+  Aggregated loss: 0.7154  (3.69s)
+
+FL training complete.
+OK  coverage=1.00  4.85s
+Script: tensorflow/lstm_seq2seq.py
+  [ast]   [converter] lstm_seq2seq.py → lstm_seq2seq_fl_ast.py
+    model_class   : (not found)
+    dataset_class : (not found)
+    optimizer     : AdamW
+    loss_calls    : []
+  Preflight [eval-client]: FAIL at [import_check]  (0.1s)
+    Error: ModuleNotFoundError: No module named 'keras'
+interface  coverage=1.00  0.05s
+  [zero_shot]   Preflight [eval-client]: FAIL at [import_check]  (0.0s)
+    Error: ModuleNotFoundError: No module named 'keras'
+interface  coverage=1.00  0.04s
+  [few_shot]   Preflight [eval-client]: FAIL at [import_check]  (0.0s)
+    Error: ModuleNotFoundError: No module named 'keras'
+interface  coverage=1.00  0.04s
+  [structured]   Preflight [eval-client]: PASS  (0.9s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.5331  steps=40  n=160  0.17s
+  Aggregated loss: 4.5331  (0.17s)
+
+FL training complete.
+OK  coverage=1.00  1.07s
+Script: tensorflow/mnist_convnet.py
+  [ast]   [converter] mnist_convnet.py → mnist_convnet_fl_ast.py
+    model_class   : (not found)
+    dataset_class : (not found)
+    optimizer     : AdamW
+    loss_calls    : []
+  Preflight [eval-client]: FAIL at [import_check]  (0.0s)
+    Error: ModuleNotFoundError: No module named 'keras'
+interface  coverage=1.00  0.04s
+  [zero_shot]   Preflight [eval-client]: FAIL at [import_check]  (0.0s)
+    Error: ModuleNotFoundError: No module named 'keras'
+interface  coverage=1.00  0.04s
+  [few_shot]   Preflight [eval-client]: FAIL at [import_check]  (0.8s)
+    Error: ModuleNotFoundError: No module named 'keras'
+interface  coverage=1.00  0.75s
+  [structured]   Preflight [eval-client]: PASS  (1.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2366  steps=13500  n=54000  18.52s
+  Aggregated loss: 0.2366  (18.54s)
+
+FL training complete.
+OK  coverage=1.00  19.5s
+Script: monai/mednist_tutorial.py
+  [ast] <frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+  [converter] mednist_tutorial.py → mednist_tutorial_fl_ast.py
+    model_class   : (not found)
+    dataset_class : (not found)
+    optimizer     : Adam
+    loss_calls    : ['CrossEntropyLoss']
+  Preflight [eval-client]: FAIL at [data_load]  (5.8s)
+    Error: NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+interface  coverage=1.00  5.75s
+  [zero_shot]   Preflight [eval-client]: FAIL at [data_load]  (3.8s)
+    Error: FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 0.
+interface  coverage=1.00  3.82s
+  [few_shot]   Preflight [eval-client]: FAIL at [data_load]  (3.8s)
+    Error: ValueError: num_samples should be a positive integer value, but got num_samples=0
+interface  coverage=1.00  13.84s
+  [structured] WARNING:root:IXI-T1 data not found at '.'. Using synthetic fallback dataset.
+WARNING:root:IXI-T1 data not found at '.'. Using synthetic fallback dataset.
+WARNING:root:IXI-T1 data not found at '.'. Using synthetic fallback dataset.
+WARNING:root:IXI-T1 data not found at '.'. Using synthetic fallback dataset.
+  Preflight [eval-client]: PASS  (7.5s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7479  steps=4  n=16  6.88s
+  Aggregated loss: 0.7479  (7.0s)
+
+FL training complete.
+OK  coverage=1.00  14.64s
+Script: monai/spleen_segmentation_3d.py
+  [ast]   [converter] spleen_segmentation_3d.py → spleen_segmentation_3d_fl_ast.py
+    model_class   : (not found)
+    dataset_class : (not found)
+    optimizer     : Adam
+    loss_calls    : []
+  Preflight [eval-client]: FAIL at [data_load]  (4.0s)
+    Error: NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+interface  coverage=1.00  3.96s
+  [zero_shot]   Preflight [eval-client]: FAIL at [data_load]  (3.8s)
+    Error: KeyError: 'data_dir'
+interface  coverage=1.00  3.84s
+  [few_shot]   Preflight [eval-client]: FAIL at [backward_pass]  (8.8s)
+    Error: RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+interface  coverage=1.00  8.84s
+  [structured] WARNING:root:NIfTI data not found at '.'. Using synthetic fallback.
+WARNING:root:NIfTI data not found at '.'. Using synthetic fallback.
+WARNING:root:NIfTI data not found at '.'. Using synthetic fallback.
+WARNING:root:NIfTI data not found at '.'. Using synthetic fallback.
+  Preflight [eval-client]: PASS  (5.8s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.4750  steps=4  n=16  3.42s
+  Aggregated loss: 0.4750  (3.43s)
+
+FL training complete.
+OK  coverage=1.00  9.3s
+Script: lightning/backbone_image_classifier.py
+  [ast]   [converter] backbone_image_classifier.py → backbone_image_classifier_fl_ast.py
+    model_class   : Backbone
+    dataset_class : (not found)
+    optimizer     : Adam
+    loss_calls    : ['cross_entropy']
+  Preflight [eval-client]: FAIL at [import_check]  (0.8s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+interface  coverage=1.00  0.79s
+  [zero_shot]   Preflight [eval-client]: FAIL at [forward_pass]  (1.4s)
+    Error: AttributeError: 'NoneType' object has no attribute 'zero_grad'
+interface  coverage=1.00  1.42s
+  [few_shot]   Preflight [eval-client]: FAIL at [backward_pass]  (1.5s)
+    Error: RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+interface  coverage=1.00  1.47s
+  [structured]   Preflight [eval-client]: PASS  (0.9s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.3957  steps=13500  n=54000  10.15s
+  Aggregated loss: 1.3957  (10.17s)
+
+FL training complete.
+OK  coverage=1.00  11.09s
+Script: lightning/mnist_lite.py
+  [ast]   [converter] mnist_lite.py → mnist_lite_fl_ast.py
+    model_class   : Generator
+    dataset_class : (not found)
+    optimizer     : Adam
+    loss_calls    : []
+  Preflight [eval-client]: FAIL at [import_check]  (0.8s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+interface  coverage=1.00  0.77s
+  [zero_shot]   Preflight [eval-client]: FAIL at [backward_pass]  (0.9s)
+    Error: RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+interface  coverage=1.00  0.93s
+  [few_shot]   Preflight [eval-client]: PASS  (0.9s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.4393  steps=13500  n=54000  66.76s
+  Aggregated loss: 1.4393  (66.78s)
+
+FL training complete.
+OK  coverage=1.00  67.71s
+  [structured]   Preflight [eval-client]: PASS  (0.9s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.4435  steps=13500  n=54000  52.67s
+  Aggregated loss: 1.4435  (52.69s)
+
+FL training complete.
+OK  coverage=1.00  53.71s
+
+Saved 40 rows (40 new) → results/benchmark_v2.csv
+
+=== Summary [claude]: e2e_runnable rate ===
+                      ast           zero_shot     few_shot      structured  
+  pytorch             0% ( 3)      0% ( 3)      67% ( 3)      100% ( 3)    
+  tensorflow          0% ( 3)      0% ( 3)      0% ( 3)      100% ( 3)    
+  monai               0% ( 2)      0% ( 2)      0% ( 2)      100% ( 2)    
+  lightning           0% ( 2)      0% ( 2)      50% ( 2)      100% ( 2)    
+
+=== Summary [claude]: component_coverage (mean) ===
+                      ast           zero_shot     few_shot      structured  
+  pytorch             1.00            1.00            1.00            1.00          
+  tensorflow          1.00            1.00            1.00            1.00          
+  monai               1.00            1.00            1.00            1.00          
+  lightning           1.00            1.00            1.00            1.00          

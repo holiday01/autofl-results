@@ -1,0 +1,251 @@
+{
+  "version": "v2",
+  "seed": 42,
+  "aggregation": "fedavg_sample_weighted",
+  "pytorch_mnist": {
+    "framework": "PyTorch",
+    "script": "/home/holiday01/autofl/benchmarks/pytorch/mnist_main_fl_structured.py",
+    "num_clients": 3,
+    "num_rounds": 5,
+    "config": {
+      "local_epochs": 1,
+      "learning_rate": 0.001,
+      "local": {
+        "batch_size": 16,
+        "gradient_accumulation": 1,
+        "use_amp": true
+      },
+      "num_classes": 10,
+      "data_path": "/home/holiday01/autofl/data",
+      "seed": 42
+    },
+    "partition": {
+      "type": "iid_disjoint_equal_shards",
+      "seed": 42,
+      "train_split_size": 54000,
+      "shard_sizes": {
+        "site-1": 18000,
+        "site-2": 18000,
+        "site-3": 18000
+      }
+    },
+    "runtime": {
+      "torch_device": "cuda",
+      "cuda_available": true,
+      "torch_cuda_device_name": "NVIDIA Graphics Device",
+      "nvidia_smi_gpu_name": "NVIDIA Graphics Device",
+      "amp_requested": true,
+      "amp_active": true,
+      "torch_version": "2.10.0+cu128",
+      "python_version": "3.11.9",
+      "batch_size": 16,
+      "gradient_accumulation": 1,
+      "cpu_count": 24,
+      "ram_gb": 125.3
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "aggregated_loss": 0.321841,
+        "per_client_loss": {
+          "site-1": 0.313953,
+          "site-2": 0.33887,
+          "site-3": 0.312699
+        },
+        "client_num_samples": {
+          "site-1": 18000,
+          "site-2": 18000,
+          "site-3": 18000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 10.23,
+        "clients": [
+          "site-1",
+          "site-2",
+          "site-3"
+        ]
+      },
+      {
+        "round": 2,
+        "aggregated_loss": 0.149355,
+        "per_client_loss": {
+          "site-1": 0.147713,
+          "site-2": 0.147978,
+          "site-3": 0.152374
+        },
+        "client_num_samples": {
+          "site-1": 18000,
+          "site-2": 18000,
+          "site-3": 18000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 10.64,
+        "clients": [
+          "site-1",
+          "site-2",
+          "site-3"
+        ]
+      },
+      {
+        "round": 3,
+        "aggregated_loss": 0.10921,
+        "per_client_loss": {
+          "site-1": 0.1116,
+          "site-2": 0.106352,
+          "site-3": 0.109678
+        },
+        "client_num_samples": {
+          "site-1": 18000,
+          "site-2": 18000,
+          "site-3": 18000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 8.2,
+        "clients": [
+          "site-1",
+          "site-2",
+          "site-3"
+        ]
+      },
+      {
+        "round": 4,
+        "aggregated_loss": 0.091861,
+        "per_client_loss": {
+          "site-1": 0.094494,
+          "site-2": 0.090964,
+          "site-3": 0.090125
+        },
+        "client_num_samples": {
+          "site-1": 18000,
+          "site-2": 18000,
+          "site-3": 18000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 10.02,
+        "clients": [
+          "site-1",
+          "site-2",
+          "site-3"
+        ]
+      },
+      {
+        "round": 5,
+        "aggregated_loss": 0.077216,
+        "per_client_loss": {
+          "site-1": 0.078327,
+          "site-2": 0.076368,
+          "site-3": 0.076953
+        },
+        "client_num_samples": {
+          "site-1": 18000,
+          "site-2": 18000,
+          "site-3": 18000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 11.6,
+        "clients": [
+          "site-1",
+          "site-2",
+          "site-3"
+        ]
+      }
+    ]
+  },
+  "lightning_gan": {
+    "framework": "Lightning",
+    "script": "/home/holiday01/autofl/benchmarks/lightning/mnist_lite_fl_structured.py",
+    "num_clients": 2,
+    "num_rounds": 3,
+    "config": {
+      "local_epochs": 1,
+      "learning_rate": 0.001,
+      "local": {
+        "batch_size": 16,
+        "gradient_accumulation": 1,
+        "use_amp": true
+      },
+      "num_classes": 10,
+      "data_path": "/home/holiday01/autofl/data",
+      "seed": 42
+    },
+    "partition": {
+      "type": "iid_disjoint_equal_shards",
+      "seed": 42,
+      "train_split_size": 54000,
+      "shard_sizes": {
+        "lgn-1": 27000,
+        "lgn-2": 27000
+      }
+    },
+    "runtime": {
+      "torch_device": "cuda",
+      "cuda_available": true,
+      "torch_cuda_device_name": "NVIDIA Graphics Device",
+      "nvidia_smi_gpu_name": "NVIDIA Graphics Device",
+      "amp_requested": true,
+      "amp_active": true,
+      "torch_version": "2.10.0+cu128",
+      "python_version": "3.11.9",
+      "batch_size": 16,
+      "gradient_accumulation": 1,
+      "cpu_count": 24,
+      "ram_gb": 125.3
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "aggregated_loss": 1.518076,
+        "per_client_loss": {
+          "lgn-1": 1.514296,
+          "lgn-2": 1.521856
+        },
+        "client_num_samples": {
+          "lgn-1": 27000,
+          "lgn-2": 27000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 8.48,
+        "clients": [
+          "lgn-1",
+          "lgn-2"
+        ]
+      },
+      {
+        "round": 2,
+        "aggregated_loss": 1.409269,
+        "per_client_loss": {
+          "lgn-1": 1.407735,
+          "lgn-2": 1.410802
+        },
+        "client_num_samples": {
+          "lgn-1": 27000,
+          "lgn-2": 27000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 9.42,
+        "clients": [
+          "lgn-1",
+          "lgn-2"
+        ]
+      },
+      {
+        "round": 3,
+        "aggregated_loss": 1.410839,
+        "per_client_loss": {
+          "lgn-1": 1.411878,
+          "lgn-2": 1.409799
+        },
+        "client_num_samples": {
+          "lgn-1": 27000,
+          "lgn-2": 27000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 10.25,
+        "clients": [
+          "lgn-1",
+          "lgn-2"
+        ]
+      }
+    ]
+  }
+}

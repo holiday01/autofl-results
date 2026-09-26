@@ -1,0 +1,34 @@
+% AutoFL system comparison table
+% Insert in §3.3 (Automated FL System Synthesis) after related work paragraph
+\begin{table*}[htbp]
+  \centering
+  \caption{Feature comparison of AutoFL and representative related systems.
+           \checkmark~= capability present; --~= absent or not applicable;
+           $\dagger$~= partial or limited coverage.
+           AutoFL uniquely combines script-migration focus with behavioral
+           contract formalization, five-stage runtime validation, and
+           identification of the loss-detach violation class.}
+  \label{tab:system_comparison}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{lcccc}
+    \toprule
+    \textbf{Capability} &
+    \textbf{AutoFL (ours)} &
+    \textbf{Helmsman}~\cite{li2025helmsman} &
+    \textbf{Flower}~\cite{beutel2022flower} &
+    \textbf{FedML}~\cite{he2020fedml} \\
+    \midrule
+    Input: existing ML script $\to$ FL client (migration) & \checkmark & -- & -- & -- \\
+    Input: high-level spec $\to$ complete FL system (de novo) & -- & \checkmark & -- & -- \\
+    Behavioral FL contract formalization (I1--I4) & \checkmark & -- & -- & -- \\
+    Structural completeness metric ($\kappa$) & \checkmark & -- & -- & -- \\
+    Five-stage runtime behavioral validation & \checkmark & -- & -- & -- \\
+    Loss-detach violation detection & \checkmark & -- & -- & -- \\
+    Multi-framework support (PyTorch/TF/MONAI/Lightning) & \checkmark & $\dagger$ & $\dagger$ & $\dagger$ \\
+    Non-differentiable framework conversion (sklearn/XGBoost) & $\dagger$ & -- & -- & -- \\
+    Cross-provider LLM validation & \checkmark & -- & -- & -- \\
+    No model fine-tuning required & \checkmark & \checkmark & N/A & N/A \\
+    Open benchmark with reproducible evaluation runs & \checkmark & \checkmark & -- & -- \\
+    \bottomrule
+  \end{tabular}
+\end{table*}

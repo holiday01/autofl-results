@@ -1,0 +1,117 @@
+{
+  "pytorch_mnist": {
+    "framework": "PyTorch",
+    "script": "/home/holiday01/autofl/benchmarks/pytorch/mnist_main_fl_structured.py",
+    "num_clients": 3,
+    "num_rounds": 5,
+    "config": {
+      "local_epochs": 1,
+      "learning_rate": 0.001,
+      "local": {
+        "batch_size": 16,
+        "gradient_accumulation": 1,
+        "use_amp": true
+      },
+      "num_classes": 10,
+      "data_path": "/home/holiday01/autofl/data"
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "aggregated_loss": 0.19932,
+        "elapsed_sec": 20.0,
+        "clients": [
+          "site-1",
+          "site-2",
+          "site-3"
+        ]
+      },
+      {
+        "round": 2,
+        "aggregated_loss": 0.102221,
+        "elapsed_sec": 19.9,
+        "clients": [
+          "site-1",
+          "site-2",
+          "site-3"
+        ]
+      },
+      {
+        "round": 3,
+        "aggregated_loss": 0.073465,
+        "elapsed_sec": 19.88,
+        "clients": [
+          "site-1",
+          "site-2",
+          "site-3"
+        ]
+      },
+      {
+        "round": 4,
+        "aggregated_loss": 0.05739,
+        "elapsed_sec": 19.89,
+        "clients": [
+          "site-1",
+          "site-2",
+          "site-3"
+        ]
+      },
+      {
+        "round": 5,
+        "aggregated_loss": 0.047435,
+        "elapsed_sec": 19.99,
+        "clients": [
+          "site-1",
+          "site-2",
+          "site-3"
+        ]
+      }
+    ]
+  },
+  "lightning_gan": {
+    "framework": "Lightning",
+    "script": "/home/holiday01/autofl/benchmarks/lightning/mnist_lite_fl_structured.py",
+    "num_clients": 2,
+    "num_rounds": 3,
+    "config": {
+      "local_epochs": 1,
+      "learning_rate": 0.001,
+      "local": {
+        "batch_size": 16,
+        "gradient_accumulation": 1,
+        "use_amp": true
+      },
+      "num_classes": 10,
+      "data_path": "/home/holiday01/autofl/data"
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "aggregated_loss": 1.463655,
+        "elapsed_sec": 15.46,
+        "clients": [
+          "lgn-1",
+          "lgn-2"
+        ]
+      },
+      {
+        "round": 2,
+        "aggregated_loss": 1.409641,
+        "elapsed_sec": 15.6,
+        "clients": [
+          "lgn-1",
+          "lgn-2"
+        ]
+      },
+      {
+        "round": 3,
+        "aggregated_loss": 1.423417,
+        "elapsed_sec": 15.48,
+        "clients": [
+          "lgn-1",
+          "lgn-2"
+        ]
+      }
+    ]
+  }
+}

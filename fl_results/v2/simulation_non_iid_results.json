@@ -1,0 +1,476 @@
+{
+  "iid": {
+    "num_clients": 3,
+    "num_rounds": 5,
+    "partition_summary": [
+      {
+        "client_id": 0,
+        "size": 20000,
+        "class_hist": [
+          1972,
+          2267,
+          2005,
+          2115,
+          1985,
+          1818,
+          1957,
+          2039,
+          1894,
+          1948
+        ]
+      },
+      {
+        "client_id": 1,
+        "size": 20000,
+        "class_hist": [
+          1909,
+          2207,
+          1945,
+          2002,
+          1949,
+          1863,
+          1999,
+          2100,
+          2029,
+          1997
+        ]
+      },
+      {
+        "client_id": 2,
+        "size": 20000,
+        "class_hist": [
+          2042,
+          2268,
+          2008,
+          2014,
+          1908,
+          1740,
+          1962,
+          2126,
+          1928,
+          2004
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "aggregated_loss": 0.318409,
+        "aggregated_loss_uniform": 0.318409,
+        "per_client_loss": {
+          "site-1": 0.307427,
+          "site-2": 0.314813,
+          "site-3": 0.332987
+        },
+        "client_num_samples": {
+          "site-1": 20000,
+          "site-2": 20000,
+          "site-3": 20000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 7.33
+      },
+      {
+        "round": 2,
+        "aggregated_loss": 0.146754,
+        "aggregated_loss_uniform": 0.146754,
+        "per_client_loss": {
+          "site-1": 0.147241,
+          "site-2": 0.149208,
+          "site-3": 0.143814
+        },
+        "client_num_samples": {
+          "site-1": 20000,
+          "site-2": 20000,
+          "site-3": 20000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 7.83
+      },
+      {
+        "round": 3,
+        "aggregated_loss": 0.104816,
+        "aggregated_loss_uniform": 0.104816,
+        "per_client_loss": {
+          "site-1": 0.105271,
+          "site-2": 0.103825,
+          "site-3": 0.105352
+        },
+        "client_num_samples": {
+          "site-1": 20000,
+          "site-2": 20000,
+          "site-3": 20000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 12.71
+      },
+      {
+        "round": 4,
+        "aggregated_loss": 0.089671,
+        "aggregated_loss_uniform": 0.089671,
+        "per_client_loss": {
+          "site-1": 0.091007,
+          "site-2": 0.092951,
+          "site-3": 0.085056
+        },
+        "client_num_samples": {
+          "site-1": 20000,
+          "site-2": 20000,
+          "site-3": 20000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 9.69
+      },
+      {
+        "round": 5,
+        "aggregated_loss": 0.077127,
+        "aggregated_loss_uniform": 0.077127,
+        "per_client_loss": {
+          "site-1": 0.07943,
+          "site-2": 0.078043,
+          "site-3": 0.073909
+        },
+        "client_num_samples": {
+          "site-1": 20000,
+          "site-2": 20000,
+          "site-3": 20000
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 6.74
+      }
+    ]
+  },
+  "dirichlet_0.5": {
+    "num_clients": 3,
+    "num_rounds": 5,
+    "alpha": 0.5,
+    "partition_summary": [
+      {
+        "client_id": 0,
+        "size": 16986,
+        "class_hist": [
+          1010,
+          1620,
+          1643,
+          796,
+          2661,
+          163,
+          1829,
+          51,
+          3379,
+          3834
+        ]
+      },
+      {
+        "client_id": 1,
+        "size": 23249,
+        "class_hist": [
+          3193,
+          2556,
+          3386,
+          3971,
+          500,
+          3194,
+          501,
+          3481,
+          2467,
+          0
+        ]
+      },
+      {
+        "client_id": 2,
+        "size": 19765,
+        "class_hist": [
+          1720,
+          2566,
+          929,
+          1364,
+          2681,
+          2064,
+          3588,
+          2733,
+          5,
+          2115
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "aggregated_loss": 0.263396,
+        "aggregated_loss_uniform": 0.267239,
+        "per_client_loss": {
+          "site-1": 0.306411,
+          "site-2": 0.23229,
+          "site-3": 0.263017
+        },
+        "client_num_samples": {
+          "site-1": 16986,
+          "site-2": 23249,
+          "site-3": 19765
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 7.08
+      },
+      {
+        "round": 2,
+        "aggregated_loss": 0.126082,
+        "aggregated_loss_uniform": 0.127165,
+        "per_client_loss": {
+          "site-1": 0.13854,
+          "site-2": 0.117588,
+          "site-3": 0.125367
+        },
+        "client_num_samples": {
+          "site-1": 16986,
+          "site-2": 23249,
+          "site-3": 19765
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 8.35
+      },
+      {
+        "round": 3,
+        "aggregated_loss": 0.096374,
+        "aggregated_loss_uniform": 0.097027,
+        "per_client_loss": {
+          "site-1": 0.105125,
+          "site-2": 0.092239,
+          "site-3": 0.093716
+        },
+        "client_num_samples": {
+          "site-1": 16986,
+          "site-2": 23249,
+          "site-3": 19765
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 9.66
+      },
+      {
+        "round": 4,
+        "aggregated_loss": 0.079915,
+        "aggregated_loss_uniform": 0.08082,
+        "per_client_loss": {
+          "site-1": 0.089792,
+          "site-2": 0.0724,
+          "site-3": 0.080267
+        },
+        "client_num_samples": {
+          "site-1": 16986,
+          "site-2": 23249,
+          "site-3": 19765
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 8.92
+      },
+      {
+        "round": 5,
+        "aggregated_loss": 0.070147,
+        "aggregated_loss_uniform": 0.071012,
+        "per_client_loss": {
+          "site-1": 0.080001,
+          "site-2": 0.06328,
+          "site-3": 0.069756
+        },
+        "client_num_samples": {
+          "site-1": 16986,
+          "site-2": 23249,
+          "site-3": 19765
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 7.47
+      }
+    ]
+  },
+  "dirichlet_0.1": {
+    "num_clients": 3,
+    "num_rounds": 5,
+    "alpha": 0.1,
+    "partition_summary": [
+      {
+        "client_id": 0,
+        "size": 18063,
+        "class_hist": [
+          28,
+          6715,
+          5957,
+          0,
+          1,
+          5164,
+          58,
+          3,
+          0,
+          137
+        ]
+      },
+      {
+        "client_id": 1,
+        "size": 23662,
+        "class_hist": [
+          5493,
+          3,
+          0,
+          2,
+          5818,
+          0,
+          113,
+          1567,
+          4855,
+          5811
+        ]
+      },
+      {
+        "client_id": 2,
+        "size": 18275,
+        "class_hist": [
+          402,
+          24,
+          1,
+          6129,
+          23,
+          257,
+          5747,
+          4695,
+          996,
+          1
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "aggregated_loss": 0.13259,
+        "aggregated_loss_uniform": 0.129978,
+        "per_client_loss": {
+          "site-1": 0.092354,
+          "site-2": 0.157591,
+          "site-3": 0.139989
+        },
+        "client_num_samples": {
+          "site-1": 18063,
+          "site-2": 23662,
+          "site-3": 18275
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 10.95
+      },
+      {
+        "round": 2,
+        "aggregated_loss": 0.077109,
+        "aggregated_loss_uniform": 0.075582,
+        "per_client_loss": {
+          "site-1": 0.051829,
+          "site-2": 0.091651,
+          "site-3": 0.083267
+        },
+        "client_num_samples": {
+          "site-1": 18063,
+          "site-2": 23662,
+          "site-3": 18275
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 9.72
+      },
+      {
+        "round": 3,
+        "aggregated_loss": 0.059515,
+        "aggregated_loss_uniform": 0.058564,
+        "per_client_loss": {
+          "site-1": 0.041943,
+          "site-2": 0.068495,
+          "site-3": 0.065255
+        },
+        "client_num_samples": {
+          "site-1": 18063,
+          "site-2": 23662,
+          "site-3": 18275
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 11.28
+      },
+      {
+        "round": 4,
+        "aggregated_loss": 0.05134,
+        "aggregated_loss_uniform": 0.050436,
+        "per_client_loss": {
+          "site-1": 0.037491,
+          "site-2": 0.059999,
+          "site-3": 0.053818
+        },
+        "client_num_samples": {
+          "site-1": 18063,
+          "site-2": 23662,
+          "site-3": 18275
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 7.97
+      },
+      {
+        "round": 5,
+        "aggregated_loss": 0.047559,
+        "aggregated_loss_uniform": 0.046762,
+        "per_client_loss": {
+          "site-1": 0.038363,
+          "site-2": 0.055301,
+          "site-3": 0.046623
+        },
+        "client_num_samples": {
+          "site-1": 18063,
+          "site-2": 23662,
+          "site-3": 18275
+        },
+        "aggregation": "fedavg_sample_weighted",
+        "elapsed_sec": 10.25
+      }
+    ]
+  },
+  "centralized": {
+    "num_epochs": 5,
+    "epochs": [
+      {
+        "round": 1,
+        "loss": 0.199741,
+        "steps": 3750,
+        "elapsed_sec": 9.8
+      },
+      {
+        "round": 2,
+        "loss": 0.101554,
+        "steps": 3750,
+        "elapsed_sec": 6.47
+      },
+      {
+        "round": 3,
+        "loss": 0.079432,
+        "steps": 3750,
+        "elapsed_sec": 5.68
+      },
+      {
+        "round": 4,
+        "loss": 0.068004,
+        "steps": 3750,
+        "elapsed_sec": 10.25
+      },
+      {
+        "round": 5,
+        "loss": 0.058779,
+        "steps": 3750,
+        "elapsed_sec": 9.45
+      }
+    ]
+  },
+  "config": {
+    "version": "v2",
+    "aggregation": "fedavg_sample_weighted",
+    "subset_note": "full dataset (60k)",
+    "batch_size": 16,
+    "use_amp": true,
+    "amp_active": true,
+    "torch_device": "cuda",
+    "cuda_available": true,
+    "torch_cuda_device_name": "NVIDIA Graphics Device",
+    "nvidia_smi_gpu_name": "NVIDIA Graphics Device",
+    "torch_version": "2.10.0+cu128",
+    "seed": 42
+  }
+}

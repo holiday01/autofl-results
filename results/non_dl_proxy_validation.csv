@@ -1,0 +1,4 @@
+script,dataset,original_estimator,original_acc,proxy_centralized_acc,proxy_fl_acc,proxy_vs_original_delta
+benchmarks/sklearn/mlp_digits.py,Digits,sklearn.MLPClassifier,0.9666666666666667,0.9833333333333333,0.9777777777777777,0.016666666666666607
+benchmarks/sklearn/svm_iris.py,Iris,sklearn.SVC(rbf),0.9666666666666667,0.9666666666666667,0.9333333333333333,0.0
+benchmarks/xgboost/xgb_breast_cancer.py,BreastCancer,xgb.XGBClassifier,0.956140350877193,0.9649122807017544,0.9736842105263158,0.00877192982456143

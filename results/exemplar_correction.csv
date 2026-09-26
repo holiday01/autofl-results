@@ -1,0 +1,19 @@
+framework,script,violations_in_original_train_step,original_e2e_runnable,original_error_stage,corrected_e2e_runnable,corrected_error_stage,cured_by_exemplar_fix,corrected_preflight_pass,corrected_error_message_head
+pytorch,dcgan_main,none,False,preflight/backward_pass,True,,True,True,
+pytorch,imagenet_main,"backward,opt.step,return .detach()",False,preflight/data_load,False,preflight/data_load,False,False,"FileNotFoundError: [Errno 2] No such file or directory: './train' | Traceback (most recent call last): |   File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run |     fn(result) |   File ""/hom"
+pytorch,mnist_main,none,False,preflight/backward_pass,True,,True,True,
+tensorflow,image_classification_from_scratch,none,False,preflight/data_load,False,preflight/data_load,False,False,"ModuleNotFoundError: No module named 'keras' | Traceback (most recent call last): |   File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run |     fn(result) |   File ""/home/holiday01/autofl/pr"
+tensorflow,lstm_seq2seq,none,False,preflight/data_load,False,preflight/data_load,False,False,"ModuleNotFoundError: No module named 'keras' | Traceback (most recent call last): |   File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run |     fn(result) |   File ""/home/holiday01/autofl/pr"
+tensorflow,mnist_convnet,"backward,opt.step,return .detach()",False,preflight/data_load,False,preflight/data_load,False,False,"ModuleNotFoundError: No module named 'keras' | Traceback (most recent call last): |   File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run |     fn(result) |   File ""/home/holiday01/autofl/pr"
+monai,mednist_tutorial,"backward,opt.step,return .detach()",False,preflight/data_load,False,preflight/data_load,False,False,"ValueError: num_samples should be a positive integer value, but got num_samples=0 | Traceback (most recent call last): |   File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run |     fn(resu"
+monai,spleen_segmentation_3d,"backward,opt.step,return .detach()",False,preflight/data_load,False,preflight/data_load,False,False,"ModuleNotFoundError: No module named 'nibabel' | Traceback (most recent call last): |   File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run |     fn(result) |   File ""/home/holiday01/autofl/"
+lightning,backbone_image_classifier,"backward,opt.step,return .detach()",False,preflight/backward_pass,True,,True,True,
+lightning,mnist_lite,none,True,,True,,False,True,
+,,,,,,,,,
+# Summary,,,,,,,,,
+# Original few-shot e2e success: 1/10 (10%),,,,,,,,,
+# Corrected-exemplar few-shot e2e success: 4/10 (40%),,,,,,,,,
+# Structured e2e success: 10/10 (100%),,,,,,,,,
+# Fisher's exact (two-sided) Original-vs-Corrected: p = 0.3034,,,,,,,,,
+# Fisher's exact (two-sided) Corrected-vs-Structured: p = 0.01084,,,,,,,,,
+# Fisher's exact (two-sided) Original-vs-Structured: p = 0.0001191,,,,,,,,,

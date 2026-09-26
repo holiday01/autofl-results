@@ -1,0 +1,88 @@
+[expansion] strata=['dev_new', 'holdout'] methods=['zero_shot', 'few_shot_corrected', 'structured'] provider=claude samples=1 scripts=28 -> 84 generations; dry_run=False max_calls=130 eval_timeout=1800.0s eval_threads=4 (one evaluation at a time)
+  dev_new     vae_main                                      zero_shot          s0 -> preflight/forward_pass   3.61s  AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  dev_new     vae_main                                      few_shot_corrected s0 -> PASS                     46.19s  
+  dev_new     vae_main                                      structured         s0 -> syntax                   0.0s  unterminated string literal (detected at line 120) (<unknown>, line 120)
+[expansion] strata=['dev_new', 'holdout'] methods=['zero_shot', 'few_shot_corrected', 'structured'] provider=claude samples=1 scripts=28 -> 84 generations; dry_run=False max_calls=130 eval_timeout=1800.0s eval_threads=4 (one evaluation at a time)
+  dev_new     mnist_rnn_main                                zero_shot          s0 -> preflight/forward_pass   4.29s  AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  dev_new     mnist_rnn_main                                few_shot_corrected s0 -> PASS                     29.01s  
+  dev_new     mnist_rnn_main                                structured         s0 -> PASS                     24.81s  
+  dev_new     bidirectional_lstm_imdb                       zero_shot          s0 -> preflight/import_check   0.07s  ModuleNotFoundError: No module named 'keras'
+  dev_new     bidirectional_lstm_imdb                       few_shot_corrected s0 -> PASS                     10.17s  
+  dev_new     bidirectional_lstm_imdb                       structured         s0 -> PASS                     14.38s  
+  dev_new     oxford_pets_image_segmentation                zero_shot          s0 -> preflight/import_check   0.02s  ModuleNotFoundError: No module named 'keras'
+  dev_new     oxford_pets_image_segmentation                few_shot_corrected s0 -> PASS                     13.15s  
+  dev_new     oxford_pets_image_segmentation                structured         s0 -> PASS                     11.08s  
+  dev_new     unet_training_array_2d                        zero_shot          s0 -> preflight/data_load      10.96s  KeyError: 'data_dir'
+  dev_new     unet_training_array_2d                        few_shot_corrected s0 -> PASS                     10.93s  
+  dev_new     unet_training_array_2d                        structured         s0 -> PASS                     11.06s  
+  dev_new     autoencoder                                   zero_shot          s0 -> preflight/forward_pass   19.21s  AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  dev_new     autoencoder                                   few_shot_corrected s0 -> PASS                     16.13s  
+  dev_new     autoencoder                                   structured         s0 -> PASS                     20.49s  
+  dev_new     lgbm_sklearn_example                          zero_shot          s0 -> preflight/import_check   0.36s  ModuleNotFoundError: No module named 'lightgbm'
+  dev_new     lgbm_sklearn_example                          few_shot_corrected s0 -> PASS                     2.95s  
+  dev_new     lgbm_sklearn_example                          structured         s0 -> preflight/import_check   1.01s  ModuleNotFoundError: No module named 'lightgbm'
+  holdout     word_language_model_main                      zero_shot          s0 -> preflight/data_load      1.56s  KeyError: 'data'
+  holdout     word_language_model_main                      few_shot_corrected s0 -> e2e                      2.32s  Traceback (most recent call last):
+  holdout     word_language_model_main                      structured         s0 -> PASS                     110.44s  
+  holdout     siamese_network_main                          zero_shot          s0 -> preflight/forward_pass   4.37s  AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  holdout     siamese_network_main                          few_shot_corrected s0 -> timeout                  1800.0s  evaluation exceeded --eval-timeout=1800s
+  holdout     siamese_network_main                          structured         s0 -> timeout                  1800.0s  evaluation exceeded --eval-timeout=1800s
+  holdout     super_resolution_main                         zero_shot          s0 -> preflight/data_load      3.57s  KeyError: 'upscale_factor'
+  holdout     super_resolution_main                         few_shot_corrected s0 -> preflight/data_load      3.67s  ValueError: num_samples should be a positive integer value, but got num_samples=0
+  holdout     super_resolution_main                         structured         s0 -> PASS                     4.37s  
+  holdout     time_sequence_prediction_train                zero_shot          s0 -> preflight/data_load      1.44s  IsADirectoryError: [Errno 21] Is a directory: '.'
+  holdout     time_sequence_prediction_train                few_shot_corrected s0 -> preflight/forward_pass   1.46s  ValueError: LSTMCell: Expected input to be 1D or 2D, got 3D instead
+  holdout     time_sequence_prediction_train                structured         s0 -> PASS                     11.22s  
+  holdout     gcn_main                                      zero_shot          s0 -> preflight/data_load      1.01s  FileNotFoundError: ./cora/cora.content not found.
+  holdout     gcn_main                                      few_shot_corrected s0 -> preflight/data_load      1.17s  FileNotFoundError: ./cora.content not found.
+  holdout     gcn_main                                      structured         s0 -> PASS                     2.02s  
+  holdout     ct_3d_image_classification                    zero_shot          s0 -> preflight/import_check   0.05s  ModuleNotFoundError: No module named 'tensorflow'
+  holdout     ct_3d_image_classification                    few_shot_corrected s0 -> PASS                     138.79s  
+  holdout     ct_3d_image_classification                    structured         s0 -> PASS                     21.08s  
+  holdout     structured_data_classification_from_scratch   zero_shot          s0 -> preflight/import_check   0.19s  ModuleNotFoundError: No module named 'keras'
+  holdout     structured_data_classification_from_scratch   few_shot_corrected s0 -> preflight/data_load      1.25s  IsADirectoryError: [Errno 21] Is a directory: '.'
+  holdout     structured_data_classification_from_scratch   structured         s0 -> preflight/forward_pass   2.1s  RuntimeError: mat1 and mat2 shapes cannot be multiplied (4x29 and 26x32)
+  holdout     timeseries_classification_from_scratch        zero_shot          s0 -> preflight/import_check   0.05s  ModuleNotFoundError: No module named 'keras'
+  holdout     timeseries_classification_from_scratch        few_shot_corrected s0 -> PASS                     1.9s  
+  holdout     timeseries_classification_from_scratch        structured         s0 -> PASS                     2.08s  
+  holdout     conditional_gan                               zero_shot          s0 -> preflight/import_check   0.02s  ModuleNotFoundError: No module named 'keras'
+  holdout     conditional_gan                               few_shot_corrected s0 -> preflight/forward_pass   3.07s  RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+  holdout     conditional_gan                               structured         s0 -> PASS                     236.45s  
+  holdout     eeg_bci_ssvepformer                           zero_shot          s0 -> preflight/import_check   0.05s  ModuleNotFoundError: No module named 'keras'
+  holdout     eeg_bci_ssvepformer                           few_shot_corrected s0 -> PASS                     3.88s  
+  holdout     eeg_bci_ssvepformer                           structured         s0 -> syntax                   0.0s  unexpected indent (<unknown>, line 6)
+  holdout     brain_tumor_segmentation                      zero_shot          s0 -> preflight/import_check   0.06s  ModuleNotFoundError: No module named 'tensorflow'
+  holdout     brain_tumor_segmentation                      few_shot_corrected s0 -> preflight/import_check   0.01s  ModuleNotFoundError: No module named 'tensorflow'
+  holdout     brain_tumor_segmentation                      structured         s0 -> preflight/forward_pass   7.38s  TypeError: SwinUNETR.__init__() got an unexpected keyword argument 'img_size'
+  holdout     densenet_training_dict                        zero_shot          s0 -> preflight/data_load      6.66s  KeyError: 'images'
+  holdout     densenet_training_dict                        few_shot_corrected s0 -> PASS                     28.86s  
+  holdout     densenet_training_dict                        structured         s0 -> PASS                     19.71s  
+  holdout     unet_training_array_3d                        zero_shot          s0 -> preflight/data_load      6.5s  KeyError: 'data_dir'
+  holdout     unet_training_array_3d                        few_shot_corrected s0 -> PASS                     12.81s  
+  holdout     unet_training_array_3d                        structured         s0 -> preflight/data_load      7.8s  RuntimeError: applying transform <monai.transforms.utility.array.EnsureChannelFirst object at 0x74b1
+  holdout     densenet_regression_3d                        zero_shot          s0 -> preflight/data_load      7.5s  KeyError: 'data_dir'
+  holdout     densenet_regression_3d                        few_shot_corrected s0 -> preflight/data_load      7.05s  ValueError: config must provide 'image_files' (list of paths) and 'labels' (list/array of targets)
+  holdout     densenet_regression_3d                        structured         s0 -> preflight/forward_pass   7.69s  AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  holdout     transformer                                   zero_shot          s0 -> preflight/forward_pass   8.18s  AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  holdout     transformer                                   few_shot_corrected s0 -> PASS                     1138.29s  
+  holdout     transformer                                   structured         s0 -> PASS                     1069.63s  
+  holdout     computer_vision_fine_tuning                   zero_shot          s0 -> preflight/data_load      2.08s  HTTPError: HTTP Error 403: Forbidden
+  holdout     computer_vision_fine_tuning                   few_shot_corrected s0 -> PASS                     7.31s  
+  holdout     computer_vision_fine_tuning                   structured         s0 -> preflight/data_load      4.12s  FileNotFoundError: Found no valid file for the classes .claude, MNIST, __pycache__, _datasets_downlo
+  holdout     semantic_segmentation                         zero_shot          s0 -> preflight/data_load      1.79s  FileNotFoundError: [Errno 2] No such file or directory: './training/image_2'
+  holdout     semantic_segmentation                         few_shot_corrected s0 -> preflight/data_load      1.81s  FileNotFoundError: [Errno 2] No such file or directory: './training/image_2'
+  holdout     semantic_segmentation                         structured         s0 -> PASS                     339.33s  
+  holdout     run_glue_no_trainer                           zero_shot          s0 -> preflight/data_load      3.23s  KeyError: 'model_name_or_path'
+  holdout     run_glue_no_trainer                           few_shot_corrected s0 -> preflight/data_load      3.23s  KeyError: 'model_name_or_path'
+  holdout     run_glue_no_trainer                           structured         s0 -> preflight/import_check   0.45s  ModuleNotFoundError: No module named 'evaluate'
+  holdout     similarity_train                              zero_shot          s0 -> preflight/forward_pass   17.57s  AttributeError: 'NoneType' object has no attribute 'zero_grad'
+[expansion] strata=['dev_new', 'holdout'] methods=['zero_shot', 'few_shot_corrected', 'structured'] provider=claude samples=1 scripts=28 -> 84 generations; dry_run=False max_calls=130 eval_timeout=1800.0s eval_threads=4 (one evaluation at a time)
+  holdout     similarity_train                              few_shot_corrected s0 -> timeout                  1800.0s  evaluation exceeded --eval-timeout=1800s
+  holdout     similarity_train                              structured         s0 -> timeout                  1800.0s  evaluation exceeded --eval-timeout=1800s
+  holdout     plot_sgd_early_stopping                       zero_shot          s0 -> preflight/forward_pass   2.71s  AttributeError: 'SGDClassifier' object has no attribute 'to'
+  holdout     plot_sgd_early_stopping                       few_shot_corrected s0 -> PASS                     23.53s  
+  holdout     plot_sgd_early_stopping                       structured         s0 -> PASS                     8.77s  
+  holdout     xgb_sklearn_examples                          zero_shot          s0 -> preflight/forward_pass   1.18s  AttributeError: 'XGBClassifier' object has no attribute 'to'
+  holdout     xgb_sklearn_examples                          few_shot_corrected s0 -> preflight/backward_pass  4.82s  RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+  holdout     xgb_sklearn_examples                          structured         s0 -> PASS                     6.12s  
+[expansion] done. live LLM calls: 8. rows -> results/expansion.csv

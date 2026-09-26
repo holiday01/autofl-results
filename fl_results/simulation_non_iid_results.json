@@ -1,0 +1,364 @@
+{
+  "iid": {
+    "num_clients": 3,
+    "num_rounds": 5,
+    "partition_summary": [
+      {
+        "client_id": 0,
+        "size": 20000,
+        "class_hist": [
+          1972,
+          2267,
+          2005,
+          2115,
+          1985,
+          1818,
+          1957,
+          2039,
+          1894,
+          1948
+        ]
+      },
+      {
+        "client_id": 1,
+        "size": 20000,
+        "class_hist": [
+          1909,
+          2207,
+          1945,
+          2002,
+          1949,
+          1863,
+          1999,
+          2100,
+          2029,
+          1997
+        ]
+      },
+      {
+        "client_id": 2,
+        "size": 20000,
+        "class_hist": [
+          2042,
+          2268,
+          2008,
+          2014,
+          1908,
+          1740,
+          1962,
+          2126,
+          1928,
+          2004
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "aggregated_loss": 0.306147,
+        "per_client_loss": {
+          "site-1": 0.315667,
+          "site-2": 0.292356,
+          "site-3": 0.310417
+        },
+        "elapsed_sec": 7.58
+      },
+      {
+        "round": 2,
+        "aggregated_loss": 0.147722,
+        "per_client_loss": {
+          "site-1": 0.14869,
+          "site-2": 0.151642,
+          "site-3": 0.142835
+        },
+        "elapsed_sec": 7.34
+      },
+      {
+        "round": 3,
+        "aggregated_loss": 0.104738,
+        "per_client_loss": {
+          "site-1": 0.105948,
+          "site-2": 0.103611,
+          "site-3": 0.104656
+        },
+        "elapsed_sec": 7.26
+      },
+      {
+        "round": 4,
+        "aggregated_loss": 0.090695,
+        "per_client_loss": {
+          "site-1": 0.090425,
+          "site-2": 0.09154,
+          "site-3": 0.09012
+        },
+        "elapsed_sec": 7.31
+      },
+      {
+        "round": 5,
+        "aggregated_loss": 0.076566,
+        "per_client_loss": {
+          "site-1": 0.08017,
+          "site-2": 0.072927,
+          "site-3": 0.076601
+        },
+        "elapsed_sec": 7.38
+      }
+    ]
+  },
+  "dirichlet_0.5": {
+    "num_clients": 3,
+    "num_rounds": 5,
+    "alpha": 0.5,
+    "partition_summary": [
+      {
+        "client_id": 0,
+        "size": 16986,
+        "class_hist": [
+          1010,
+          1620,
+          1643,
+          796,
+          2661,
+          163,
+          1829,
+          51,
+          3379,
+          3834
+        ]
+      },
+      {
+        "client_id": 1,
+        "size": 23249,
+        "class_hist": [
+          3193,
+          2556,
+          3386,
+          3971,
+          500,
+          3194,
+          501,
+          3481,
+          2467,
+          0
+        ]
+      },
+      {
+        "client_id": 2,
+        "size": 19765,
+        "class_hist": [
+          1720,
+          2566,
+          929,
+          1364,
+          2681,
+          2064,
+          3588,
+          2733,
+          5,
+          2115
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "aggregated_loss": 0.259542,
+        "per_client_loss": {
+          "site-1": 0.285852,
+          "site-2": 0.230958,
+          "site-3": 0.261816
+        },
+        "elapsed_sec": 7.39
+      },
+      {
+        "round": 2,
+        "aggregated_loss": 0.130101,
+        "per_client_loss": {
+          "site-1": 0.136386,
+          "site-2": 0.118369,
+          "site-3": 0.135548
+        },
+        "elapsed_sec": 7.39
+      },
+      {
+        "round": 3,
+        "aggregated_loss": 0.097828,
+        "per_client_loss": {
+          "site-1": 0.09979,
+          "site-2": 0.093006,
+          "site-3": 0.100688
+        },
+        "elapsed_sec": 7.4
+      },
+      {
+        "round": 4,
+        "aggregated_loss": 0.080892,
+        "per_client_loss": {
+          "site-1": 0.084613,
+          "site-2": 0.078924,
+          "site-3": 0.079139
+        },
+        "elapsed_sec": 7.35
+      },
+      {
+        "round": 5,
+        "aggregated_loss": 0.07236,
+        "per_client_loss": {
+          "site-1": 0.077156,
+          "site-2": 0.069259,
+          "site-3": 0.070666
+        },
+        "elapsed_sec": 7.37
+      }
+    ]
+  },
+  "dirichlet_0.1": {
+    "num_clients": 3,
+    "num_rounds": 5,
+    "alpha": 0.1,
+    "partition_summary": [
+      {
+        "client_id": 0,
+        "size": 18063,
+        "class_hist": [
+          28,
+          6715,
+          5957,
+          0,
+          1,
+          5164,
+          58,
+          3,
+          0,
+          137
+        ]
+      },
+      {
+        "client_id": 1,
+        "size": 23662,
+        "class_hist": [
+          5493,
+          3,
+          0,
+          2,
+          5818,
+          0,
+          113,
+          1567,
+          4855,
+          5811
+        ]
+      },
+      {
+        "client_id": 2,
+        "size": 18275,
+        "class_hist": [
+          402,
+          24,
+          1,
+          6129,
+          23,
+          257,
+          5747,
+          4695,
+          996,
+          1
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "aggregated_loss": 0.12635,
+        "per_client_loss": {
+          "site-1": 0.087367,
+          "site-2": 0.160188,
+          "site-3": 0.131494
+        },
+        "elapsed_sec": 7.38
+      },
+      {
+        "round": 2,
+        "aggregated_loss": 0.074326,
+        "per_client_loss": {
+          "site-1": 0.04977,
+          "site-2": 0.096483,
+          "site-3": 0.076725
+        },
+        "elapsed_sec": 7.32
+      },
+      {
+        "round": 3,
+        "aggregated_loss": 0.059159,
+        "per_client_loss": {
+          "site-1": 0.037559,
+          "site-2": 0.080783,
+          "site-3": 0.059136
+        },
+        "elapsed_sec": 7.39
+      },
+      {
+        "round": 4,
+        "aggregated_loss": 0.05322,
+        "per_client_loss": {
+          "site-1": 0.037529,
+          "site-2": 0.071051,
+          "site-3": 0.05108
+        },
+        "elapsed_sec": 7.37
+      },
+      {
+        "round": 5,
+        "aggregated_loss": 0.046167,
+        "per_client_loss": {
+          "site-1": 0.031461,
+          "site-2": 0.061431,
+          "site-3": 0.04561
+        },
+        "elapsed_sec": 7.38
+      }
+    ]
+  },
+  "centralized": {
+    "num_epochs": 5,
+    "epochs": [
+      {
+        "round": 1,
+        "loss": 0.207286,
+        "steps": 3750,
+        "elapsed_sec": 7.01
+      },
+      {
+        "round": 2,
+        "loss": 0.105957,
+        "steps": 3750,
+        "elapsed_sec": 7.01
+      },
+      {
+        "round": 3,
+        "loss": 0.082254,
+        "steps": 3750,
+        "elapsed_sec": 6.96
+      },
+      {
+        "round": 4,
+        "loss": 0.071263,
+        "steps": 3750,
+        "elapsed_sec": 7.07
+      },
+      {
+        "round": 5,
+        "loss": 0.059743,
+        "steps": 3750,
+        "elapsed_sec": 7.01
+      }
+    ]
+  },
+  "config": {
+    "subset_note": "full dataset (60k)",
+    "batch_size": 16,
+    "use_amp": true,
+    "device": "NVIDIA Graphics Device",
+    "seed": 42
+  }
+}

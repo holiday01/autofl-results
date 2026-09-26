@@ -1,0 +1,115 @@
+[self-repair] provider=claude bases=['zero_shot', 'few_shot'] rounds=3 seeds=1 scripts=10 dry_run=False max_calls=None
+  Preflight [eval-client]: FAIL at [data_load]  (1.8s)
+    Error: KeyError: 'dataset'
+  dcgan_main                          zero_shot          s0 r0 -> preflight/data_load
+                                                         s0 r1 -> syntax  [22927/2666 tok, $0.1775]
+[self-repair] provider=claude bases=['zero_shot', 'few_shot'] rounds=3 seeds=1 scripts=10 dry_run=False max_calls=None
+  Preflight [eval-client]: FAIL at [data_load]  (2.2s)
+    Error: KeyError: 'dataset'
+  dcgan_main                          zero_shot          s0 r0 -> preflight/data_load
+  Preflight [eval-client]: FAIL at [forward_pass]  (1.6s)
+    Error: AttributeError: 'dict' object has no attribute 'to'
+                                                         s0 r1 -> preflight/forward_pass  [22927/2648 tok, $0.0466]
+/home/holiday01/.pyenv/versions/3.11.9/lib/python3.11/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[self-repair] provider=claude bases=['zero_shot', 'few_shot'] rounds=3 seeds=1 scripts=10 dry_run=False max_calls=None
+  skip dcgan_main/zero_shot/s0 (resume)
+  Preflight [eval-client]: PASS  (4.8s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=2.6133  steps=225  n=900  57.51s
+  Aggregated loss: 2.6133  (57.52s)
+
+FL training complete.
+  dcgan_main                          few_shot           s0 r0 -> PASS
+  Preflight [eval-client]: FAIL at [data_load]  (2.5s)
+    Error: FileNotFoundError: [Errno 2] No such file or directory: 'imagenet/train'
+  imagenet_main                       zero_shot          s0 r0 -> preflight/data_load
+/home/holiday01/.pyenv/versions/3.11.9/lib/python3.11/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+  Preflight [eval-client]: FAIL at [forward_pass]  (9.6s)
+    Error: AttributeError: 'NoneType' object has no attribute 'zero_grad'
+                                                         s0 r1 -> preflight/forward_pass  [23306/1154 tok, $0.0744]
+/home/holiday01/.pyenv/versions/3.11.9/lib/python3.11/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+  Preflight [eval-client]: FAIL at [forward_pass]  (10.8s)
+    Error: RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+                                                         s0 r2 -> preflight/forward_pass  [23327/1389 tok, $0.0781]
+[self-repair] provider=claude bases=['zero_shot', 'few_shot'] rounds=3 seeds=1 scripts=10 dry_run=False max_calls=None
+  skip dcgan_main/zero_shot/s0 (resume)
+  skip dcgan_main/few_shot/s0 (resume)
+  skip imagenet_main/zero_shot/s0 (resume)
+  skip imagenet_main/few_shot/s0 (resume)
+  skip mnist_main/zero_shot/s0 (resume)
+  mnist_main                          few_shot           s0 r0 -> PASS
+  image_classification_from_scratch   zero_shot          s0 r0 -> preflight/import_check
+                                                         s0 r1 -> preflight/import_check  [20453/1308 tok, $0.0596]
+                                                         s0 r2 -> preflight/import_check  [20457/2829 tok, $0.0825]
+                                                         s0 r3 -> preflight/import_check  [20475/2954 tok, $0.0844]
+  image_classification_from_scratch   few_shot           s0 r0 -> preflight/import_check
+                                                         s0 r1 -> preflight/import_check  [21338/2223 tok, $0.0787]
+                                                         s0 r2 -> preflight/import_check  [21338/13232 tok, $0.2438]
+                                                         s0 r3 -> preflight/import_check  [21780/2672 tok, $0.0880]
+  lstm_seq2seq                        zero_shot          s0 r0 -> preflight/import_check
+                                                         s0 r1 -> preflight/import_check  [21039/1717 tok, $0.0693]
+                                                         s0 r2 -> preflight/import_check  [21041/6755 tok, $0.1449]
+                                                         s0 r3 -> preflight/import_check  [81969/1881 tok, $0.0918]
+  lstm_seq2seq                        few_shot           s0 r0 -> preflight/import_check
+                                                         s0 r1 -> preflight/import_check  [171857/6011 tok, $0.2080]
+                                                         s0 r2 -> preflight/import_check  [21985/13249 tok, $0.2479]
+                                                         s0 r3 -> preflight/import_check  [83124/3033 tok, $0.1160]
+  mnist_convnet                       zero_shot          s0 r0 -> preflight/import_check
+                                                         s0 r1 -> preflight/import_check  [78720/843 tok, $0.0567]
+                                                         s0 r2 -> preflight/import_check  [17852/4612 tok, $0.0936]
+                                                         s0 r3 -> preflight/import_check  [17949/1133 tok, $0.0420]
+  mnist_convnet                       few_shot           s0 r0 -> preflight/import_check
+                                                         s0 r1 -> preflight/backward_pass  [19729/2298 tok, $0.0701]
+                                                         s0 r2 -> PASS  [79748/15159 tok, $0.2777]
+  mednist_tutorial                    zero_shot          s0 r0 -> preflight/data_load
+                                                         s0 r1 -> preflight/data_load  [80782/2153 tok, $0.0888]
+                                                         s0 r2 -> preflight/forward_pass  [19994/4943 tok, $0.1114]
+                                                         s0 r3 -> preflight/forward_pass  [20300/2355 tok, $0.0744]
+  mednist_tutorial                    few_shot           s0 r0 -> preflight/backward_pass
+                                                         s0 r1 -> PASS  [82907/3914 tok, $0.1279]
+  spleen_segmentation_3d              zero_shot          s0 r0 -> preflight/data_load
+                                                         s0 r1 -> preflight/forward_pass  [19954/1612 tok, $0.0612]
+                                                         s0 r2 -> preflight/forward_pass  [19969/1720 tok, $0.0629]
+                                                         s0 r3 -> preflight/forward_pass  [102881/3161 tok, $0.1538]
+  spleen_segmentation_3d              few_shot           s0 r0 -> preflight/backward_pass
+                                                         s0 r1 -> PASS  [23390/5594 tok, $0.1415]
+  backbone_image_classifier           zero_shot          s0 r0 -> preflight/forward_pass
+                                                         s0 r1 -> preflight/forward_pass  [79306/1231 tok, $0.0661]
+                                                         s0 r2 -> preflight/backward_pass  [100910/3607 tok, $0.1486]
+                                                         s0 r3 -> PASS  [18548/1742 tok, $0.0547]
+  backbone_image_classifier           few_shot           s0 r0 -> preflight/backward_pass
+                                                         s0 r1 -> PASS  [19414/2028 tok, $0.0642]
+  mnist_lite                          zero_shot          s0 r0 -> preflight/backward_pass
+                                                         s0 r1 -> PASS  [104442/4769 tok, $0.1873]
+  mnist_lite                          few_shot           s0 r0 -> PASS
+[self-repair] done. live calls: 30. rows -> results/self_repair_claude.csv
+[self-repair] provider=claude bases=['zero_shot', 'few_shot'] rounds=3 seeds=1 scripts=10 dry_run=False max_calls=None
+  skip dcgan_main/zero_shot/s0 (resume)
+  skip dcgan_main/few_shot/s0 (resume)
+  skip imagenet_main/zero_shot/s0 (resume)
+  skip imagenet_main/few_shot/s0 (resume)
+  skip mnist_main/zero_shot/s0 (resume)
+  skip mnist_main/few_shot/s0 (resume)
+  skip image_classification_from_scratch/zero_shot/s0 (resume)
+  skip image_classification_from_scratch/few_shot/s0 (resume)
+  skip lstm_seq2seq/zero_shot/s0 (resume)
+  skip lstm_seq2seq/few_shot/s0 (resume)
+  skip mnist_convnet/zero_shot/s0 (resume)
+  skip mnist_convnet/few_shot/s0 (resume)
+  skip mednist_tutorial/zero_shot/s0 (resume)
+  skip mednist_tutorial/few_shot/s0 (resume)
+  skip spleen_segmentation_3d/zero_shot/s0 (resume)
+  skip spleen_segmentation_3d/few_shot/s0 (resume)
+  skip backbone_image_classifier/zero_shot/s0 (resume)
+  skip backbone_image_classifier/few_shot/s0 (resume)
+  skip mnist_lite/zero_shot/s0 (resume)
+  skip mnist_lite/few_shot/s0 (resume)
+[self-repair] done. live calls: 0. rows -> results/self_repair_claude.csv

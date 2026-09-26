@@ -1,0 +1,56 @@
+script_name,framework,method,provider,syntax_valid,interface_complete,build_model_present,build_dataloader_present,train_step_present,optimizer_detected,component_coverage,preflight_pass,e2e_runnable,error_stage,error_message,elapsed_sec,data_path,data_path_exists,strict_data,spec_version,dataset_class,dataset_len
+mlp_digits,sklearn,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 2",1.93,.,True,False,n/a,,-1
+mlp_digits,sklearn,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'NoneType' object has no attribute 'zero_grad'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 254, in _stage_forward_pass
+    loss = mod.train_step",1.43,.,True,False,v1,TensorDataset,1437
+mlp_digits,sklearn,few_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/backward_pass,"RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 278, in _stage_backward_pass
+  ",1.83,.,True,False,v1,DigitsDataset,1797
+mlp_digits,sklearn,structured,claude,True,True,True,True,True,True,1.0,True,True,,,1.62,.,True,False,v1,TensorDataset,1797
+svm_iris,sklearn,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 2",1.51,.,True,False,n/a,,-1
+svm_iris,sklearn,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'SGDClassifier' object has no attribute 'to'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 245, in _stage_forward_pass
+    model = model.to(device",0.6,.,True,False,v1,,-1
+svm_iris,sklearn,few_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'SVC' object has no attribute 'to'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 245, in _stage_forward_pass
+    model = model.to(device)
+        ",1.38,.,True,False,v1,TensorDataset,120
+svm_iris,sklearn,structured,claude,True,True,True,True,True,True,1.0,True,True,,,1.51,.,True,False,v1,TensorDataset,150
+xgb_breast_cancer,xgboost,ast,claude,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 2",1.47,.,True,False,n/a,,-1
+xgb_breast_cancer,xgboost,zero_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'XGBClassifier' object has no attribute 'to'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 245, in _stage_forward_pass
+    model = model.to(device",0.61,.,True,False,v1,,-1
+xgb_breast_cancer,xgboost,few_shot,claude,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'XGBClassifier' object has no attribute 'to'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 138, in run
+    fn(result)
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 245, in _stage_forward_pass
+    model = model.to(device",1.4,.,True,False,v1,BreastCancerDataset,455
+xgb_breast_cancer,xgboost,structured,claude,True,True,True,True,True,True,1.0,True,True,,,1.64,.,True,False,v1,TensorDataset,569

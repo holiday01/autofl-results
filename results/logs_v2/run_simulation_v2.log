@@ -1,0 +1,112 @@
+==================================================
+Hardware Profile
+==================================================
+  GPU 0: NVIDIA Graphics Device  VRAM=16303MB  Free=15850MB
+  CPU cores : 24
+  RAM       : 125.3 GB
+  CUDA      : True
+
+Suggested local overrides:
+  batch_size           = 16
+  num_workers          = 4
+  use_amp              = True
+  gradient_accumulation= 1
+==================================================
+AutoFL End-to-End FL Simulation (v2)
+CUDA_VISIBLE_DEVICES=unset
+torch.cuda.is_available()=True
+
+============================================================
+Simulation 1: PyTorch MNIST | 3 clients | 5 rounds | seed=42
+============================================================
+
+Running preflight checks ...
+  Preflight [site-1]: PASS
+  Preflight [site-2]: PASS
+  Preflight [site-3]: PASS
+  3/3 clients ready: ['site-1', 'site-2', 'site-3']
+  IID shards (disjoint, of 54000 train examples): {'site-1': 18000, 'site-2': 18000, 'site-3': 18000}
+
+Starting FL: 5 rounds, 3 clients
+------------------------------------------------------------
+
+Round 1/5
+    [site-1] loss=0.3140  steps=1125  n=18000  2.97s
+    [site-2] loss=0.3389  steps=1125  n=18000  3.16s
+    [site-3] loss=0.3127  steps=1125  n=18000  3.81s
+  Aggregated loss: 0.3218  (10.23s)
+
+Round 2/5
+    [site-1] loss=0.1477  steps=1125  n=18000  3.1s
+    [site-2] loss=0.1480  steps=1125  n=18000  3.09s
+    [site-3] loss=0.1524  steps=1125  n=18000  4.16s
+  Aggregated loss: 0.1494  (10.64s)
+
+Round 3/5
+    [site-1] loss=0.1116  steps=1125  n=18000  2.29s
+    [site-2] loss=0.1064  steps=1125  n=18000  2.49s
+    [site-3] loss=0.1097  steps=1125  n=18000  3.18s
+  Aggregated loss: 0.1092  (8.2s)
+
+Round 4/5
+    [site-1] loss=0.0945  steps=1125  n=18000  2.96s
+    [site-2] loss=0.0910  steps=1125  n=18000  3.2s
+    [site-3] loss=0.0901  steps=1125  n=18000  3.6s
+  Aggregated loss: 0.0919  (10.02s)
+
+Round 5/5
+    [site-1] loss=0.0783  steps=1125  n=18000  3.64s
+    [site-2] loss=0.0764  steps=1125  n=18000  3.87s
+    [site-3] loss=0.0770  steps=1125  n=18000  3.75s
+  Aggregated loss: 0.0772  (11.6s)
+
+--- Convergence Table (Simulation 1: PyTorch MNIST) ---
+ Round   Agg. Loss   Elapsed (s)
+----------------------------------
+     1      0.3218         10.23
+     2      0.1494         10.64
+     3      0.1092          8.20
+     4      0.0919         10.02
+     5      0.0772         11.60
+
+============================================================
+Simulation 2: Lightning GAN | 2 clients | 3 rounds | seed=42
+============================================================
+
+Running preflight checks ...
+  Preflight [lgn-1]: PASS
+  Preflight [lgn-2]: PASS
+  2/2 clients ready: ['lgn-1', 'lgn-2']
+  IID shards (disjoint, of 54000 train examples): {'lgn-1': 27000, 'lgn-2': 27000}
+
+Starting FL: 3 rounds, 2 clients
+------------------------------------------------------------
+
+Round 1/3
+    [lgn-1] loss=1.5143  steps=1688  n=27000  4.73s
+    [lgn-2] loss=1.5219  steps=1688  n=27000  3.39s
+  Aggregated loss: 1.5181  (8.48s)
+
+Round 2/3
+    [lgn-1] loss=1.4077  steps=1688  n=27000  4.04s
+    [lgn-2] loss=1.4108  steps=1688  n=27000  4.92s
+  Aggregated loss: 1.4093  (9.42s)
+
+Round 3/3
+    [lgn-1] loss=1.4119  steps=1688  n=27000  5.35s
+    [lgn-2] loss=1.4098  steps=1688  n=27000  4.4s
+  Aggregated loss: 1.4108  (10.25s)
+
+--- Convergence Table (Simulation 2: Lightning GAN) ---
+ Round   Agg. Loss   Elapsed (s)
+----------------------------------
+     1      1.5181          8.48
+     2      1.4093          9.42
+     3      1.4108         10.25
+
+Results saved to fl_results/v2/simulation_results.json
+Convergence plot saved to results/figures_v2/fig5_fl_convergence.pdf and results/figures_v2/fig5_fl_convergence.png
+Simulation notes saved to fl_results/v2/simulation_notes.md
+
+Total simulation time: 80.2s
+Done.

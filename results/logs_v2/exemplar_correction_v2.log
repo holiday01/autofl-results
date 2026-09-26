@@ -1,0 +1,18 @@
+script                                    orig_viol           orig_e2e    corr_e2e    cured   corr_err_stage
+------------------------------------------------------------------------------------------------------------------------
+  pytorch/dcgan_main                      none                False       True        True    
+  pytorch/imagenet_main                   backward,opt.step,return .detach()  False       False       False   preflight/data_load
+  pytorch/mnist_main                      none                False       True        True    
+  tensorflow/image_classification_from_scratch  none                False       False       False   preflight/import_check
+  tensorflow/lstm_seq2seq                 none                False       False       False   preflight/import_check
+  tensorflow/mnist_convnet                backward,opt.step,return .detach()  False       False       False   preflight/import_check
+  monai/mednist_tutorial                  backward,opt.step,return .detach()  False       False       False   preflight/data_load
+  monai/spleen_segmentation_3d            backward,opt.step,return .detach()  False       True        True    
+  lightning/backbone_image_classifier     backward,opt.step,return .detach()  False       True        True    
+  lightning/mnist_lite                    none                True        True        False   
+
+Saved 10 rows -> results/exemplar_correction_v2.csv
+
+=== Summary ===
+Original few-shot e2e success: 1/10
+Corrected-exemplar few-shot e2e success: 5/10

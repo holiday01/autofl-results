@@ -1,0 +1,1198 @@
+[ablation] provider=claude conditions=['schema_sys', 'schema_user', 'schema_sys_exemplar', 'exemplar_invariants', 'framework_rules_only', 'schema_sys_prohibit'] samples=2 scripts=10 -> 120 generations; dry_run=False max_calls=None
+  Preflight [eval-client]: PASS  (9.7s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+[ablation] provider=claude conditions=['schema_sys', 'schema_user', 'schema_sys_exemplar', 'exemplar_invariants', 'framework_rules_only', 'schema_sys_prohibit'] samples=2 scripts=10 -> 120 generations; dry_run=False max_calls=None
+  Preflight [eval-client]: PASS  (7.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=99.9914  steps=11250  n=45000  1027.51s
+  Aggregated loss: 99.9914  (1028.41s)
+
+FL training complete.
+  dcgan_main                          schema_sys             s0 -> PASS  [-1/-1 tok, $nan]
+  Preflight [eval-client]: PASS  (5.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=99.9913  steps=11250  n=45000  1022.09s
+  Aggregated loss: 99.9913  (1022.66s)
+
+FL training complete.
+  dcgan_main                          schema_sys             s1 -> PASS  [14252/8623 tok, $0.1336]
+  Preflight [eval-client]: PASS  (4.3s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.6644  steps=11250  n=45000  963.86s
+  Aggregated loss: 1.6644  (964.47s)
+
+FL training complete.
+  dcgan_main                          schema_user            s0 -> PASS  [20412/9114 tok, $0.1765]
+  Preflight [eval-client]: PASS  (4.3s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.6581  steps=11250  n=45000  987.38s
+  Aggregated loss: 1.6581  (987.94s)
+
+FL training complete.
+  dcgan_main                          schema_user            s1 -> PASS  [18170/7196 tok, $0.1440]
+  Preflight [eval-client]: PASS  (4.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.6878  steps=11250  n=45000  925.67s
+  Aggregated loss: 1.6878  (926.22s)
+
+FL training complete.
+  dcgan_main                          schema_sys_exemplar    s0 -> PASS  [16368/9916 tok, $0.1963]
+  Preflight [eval-client]: PASS  (5.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.6360  steps=11250  n=45000  830.94s
+  Aggregated loss: 1.6360  (831.55s)
+
+FL training complete.
+  dcgan_main                          schema_sys_exemplar    s1 -> PASS  [16368/10097 tok, $0.1564]
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for dcgan_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for dcgan_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for dcgan_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for dcgan_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for dcgan_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for dcgan_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+  !! generation failed for imagenet_main: LLM call failed after retries: claude CLI failed (rc=1): 
+    [retry 1/3 after 60s: claude CLI failed (rc=1): ]
+    [retry 2/3 after 180s: claude CLI failed (rc=1): ]
+    [retry 3/3 after 600s: claude CLI failed (rc=1): ]
+/home/holiday01/.pyenv/versions/3.11.9/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/holiday01/.pyenv/versions/3.11.9/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/home/holiday01/.pyenv/versions/3.11.9/lib/python3.11/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+  Preflight [eval-client]: PASS  (2.8s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=7.2509  steps=225  n=900  50.27s
+  Aggregated loss: 7.2509  (50.29s)
+
+FL training complete.
+  imagenet_main                       schema_sys_exemplar    s0 -> PASS  [16611/7741 tok, $0.2158]
+  Preflight [eval-client]: PASS  (3.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=7.8370  steps=45  n=180  10.69s
+  Aggregated loss: 7.8370  (10.84s)
+
+FL training complete.
+  imagenet_main                       schema_sys_exemplar    s1 -> PASS  [18853/5769 tok, $0.1490]
+  Preflight [eval-client]: PASS  (2.7s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=7.8849  steps=50  n=200  9.76s
+  Aggregated loss: 7.8849  (9.87s)
+
+FL training complete.
+  imagenet_main                       exemplar_invariants    s0 -> PASS  [24638/3513 tok, $0.2005]
+  Preflight [eval-client]: PASS  (3.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=7.8217  steps=64  n=256  13.93s
+  Aggregated loss: 7.8217  (14.07s)
+
+FL training complete.
+  imagenet_main                       exemplar_invariants    s1 -> PASS  [24638/3435 tok, $0.0589]
+  Preflight [eval-client]: FAIL at [data_load]  (2.0s)
+    Error: FileNotFoundError: Found no valid file for the classes .claude, FashionMNIST, MNIST, __pycache__, _snapshots, _synthetic, benchmarks, cifar-10-batches-py, cifar10, config, converter, data, eval, examples, fl_results, fl_runtime, hardware, preflight, tests, zenodo_v2. Supported extensions are: .jpg, .jpeg, .png, .ppm, .bmp, .pgm, .tif, .tiff, .webp
+  imagenet_main                       framework_rules_only   s0 -> preflight/data_load  [83186/5166 tok, $0.5766]
+  Preflight [eval-client]: FAIL at [data_load]  (2.2s)
+    Error: FileNotFoundError: Found no valid file for the classes .claude, FashionMNIST, MNIST, __pycache__, _snapshots, _synthetic, benchmarks, cifar-10-batches-py, cifar10, config, converter, data, eval, examples, fl_results, fl_runtime, hardware, preflight, tests, zenodo_v2. Supported extensions are: .jpg, .jpeg, .png, .ppm, .bmp, .pgm, .tif, .tiff, .webp
+  imagenet_main                       framework_rules_only   s1 -> preflight/data_load  [22571/7520 tok, $0.1655]
+  Preflight [eval-client]: PASS  (3.6s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=7.8847  steps=52  n=205  11.57s
+  Aggregated loss: 7.8847  (11.74s)
+
+FL training complete.
+  imagenet_main                       schema_sys_prohibit    s0 -> PASS  [16756/11006 tok, $0.2180]
+  Preflight [eval-client]: PASS  (3.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=7.7815  steps=29  n=116  6.22s
+  Aggregated loss: 7.7815  (6.31s)
+
+FL training complete.
+  imagenet_main                       schema_sys_prohibit    s1 -> PASS  [16756/8991 tok, $0.1399]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3245  steps=12000  n=48000  83.4s
+  Aggregated loss: 0.3245  (83.42s)
+
+FL training complete.
+  mnist_main                          schema_sys             s0 -> PASS  [12323/2384 tok, $0.0395]
+  Preflight [eval-client]: PASS  (2.3s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3269  steps=12000  n=48000  84.37s
+  Aggregated loss: 0.3269  (84.4s)
+
+FL training complete.
+  mnist_main                          schema_sys             s1 -> PASS  [12323/2622 tok, $0.0430]
+  Preflight [eval-client]: PASS  (2.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2942  steps=13500  n=54000  84.59s
+  Aggregated loss: 0.2942  (84.61s)
+
+FL training complete.
+  mnist_main                          schema_user            s0 -> PASS  [18483/2644 tok, $0.0678]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2978  steps=13500  n=54000  82.99s
+  Aggregated loss: 0.2978  (83.02s)
+
+FL training complete.
+  mnist_main                          schema_user            s1 -> PASS  [18483/1182 tok, $0.0233]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3174  steps=13500  n=54000  85.58s
+  Aggregated loss: 0.3174  (85.6s)
+
+FL training complete.
+  mnist_main                          schema_sys_exemplar    s0 -> PASS  [14439/3928 tok, $0.0949]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2925  steps=13500  n=54000  87.97s
+  Aggregated loss: 0.2925  (87.98s)
+
+FL training complete.
+  mnist_main                          schema_sys_exemplar    s1 -> PASS  [72812/3821 tok, $0.4942]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2842  steps=13500  n=54000  85.54s
+  Aggregated loss: 0.2842  (85.55s)
+
+FL training complete.
+  mnist_main                          exemplar_invariants    s0 -> PASS  [20224/3941 tok, $0.0977]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2981  steps=13500  n=54000  89.03s
+  Aggregated loss: 0.2981  (89.05s)
+
+FL training complete.
+  mnist_main                          exemplar_invariants    s1 -> PASS  [80839/4499 tok, $0.1243]
+  Preflight [eval-client]: FAIL at [forward_pass]  (2.0s)
+    Error: AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  mnist_main                          framework_rules_only   s0 -> preflight/forward_pass  [18157/1862 tok, $0.0542]
+  Preflight [eval-client]: FAIL at [forward_pass]  (2.0s)
+    Error: AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  mnist_main                          framework_rules_only   s1 -> preflight/forward_pass  [18157/1647 tok, $0.0302]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3084  steps=13500  n=54000  85.95s
+  Aggregated loss: 0.3084  (85.97s)
+
+FL training complete.
+  mnist_main                          schema_sys_prohibit    s0 -> PASS  [12342/2980 tok, $0.0680]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.3193  steps=12000  n=48000  83.56s
+  Aggregated loss: 0.3193  (83.57s)
+
+FL training complete.
+  mnist_main                          schema_sys_prohibit    s1 -> PASS  [12342/3642 tok, $0.0583]
+  Preflight [eval-client]: PASS  (3.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7214  steps=50  n=200  18.35s
+  Aggregated loss: 0.7214  (18.41s)
+
+FL training complete.
+  image_classification_from_scratch   schema_sys             s0 -> PASS  [11233/13989 tok, $0.2132]
+  Preflight [eval-client]: FAIL at [data_load]  (2.0s)
+    Error: FileNotFoundError: Found no valid file for the classes .claude, FashionMNIST, MNIST, __pycache__, _snapshots, _synthetic, benchmarks, cifar-10-batches-py, cifar10, config, converter, data, eval, examples, fl_results, fl_runtime, hardware, preflight, tests, zenodo_v2. Supported extensions are: .jpg, .jpeg, .png, .ppm, .bmp, .pgm, .tif, .tiff, .webp
+  image_classification_from_scratch   schema_sys             s1 -> preflight/data_load  [74281/6875 tok, $0.1254]
+  Preflight [eval-client]: PASS  (3.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7504  steps=40  n=160  15.42s
+  Aggregated loss: 0.7504  (15.48s)
+
+FL training complete.
+  image_classification_from_scratch   schema_user            s0 -> PASS  [19635/6393 tok, $0.1310]
+  Preflight [eval-client]: PASS  (3.6s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7465  steps=20  n=80  8.13s
+  Aggregated loss: 0.7465  (8.16s)
+
+FL training complete.
+  image_classification_from_scratch   schema_user            s1 -> PASS  [80441/13375 tok, $0.2551]
+  Preflight [eval-client]: PASS  (3.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7724  steps=40  n=160  17.78s
+  Aggregated loss: 0.7724  (17.83s)
+
+FL training complete.
+  image_classification_from_scratch   schema_sys_exemplar    s0 -> PASS  [15591/16604 tok, $0.2919]
+  Preflight [eval-client]: PASS  (3.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7330  steps=40  n=160  16.47s
+  Aggregated loss: 0.7330  (16.5s)
+
+FL training complete.
+  image_classification_from_scratch   schema_sys_exemplar    s1 -> PASS  [15591/15068 tok, $0.2307]
+  Preflight [eval-client]: PASS  (3.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7250  steps=80  n=320  27.8s
+  Aggregated loss: 0.7250  (27.91s)
+
+FL training complete.
+  image_classification_from_scratch   exemplar_invariants    s0 -> PASS  [21376/13395 tok, $0.2465]
+  Preflight [eval-client]: PASS  (3.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7493  steps=50  n=200  18.53s
+  Aggregated loss: 0.7493  (18.57s)
+
+FL training complete.
+  image_classification_from_scratch   exemplar_invariants    s1 -> PASS  [172643/13677 tok, $0.3444]
+/home/holiday01/.pyenv/versions/3.11.9/lib/python3.11/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+  Preflight [eval-client]: FAIL at [import_check]  (0.1s)
+    Error: ModuleNotFoundError: No module named 'keras'
+  image_classification_from_scratch   framework_rules_only   s0 -> preflight/import_check  [19309/7840 tok, $0.1507]
+  Preflight [eval-client]: FAIL at [import_check]  (0.1s)
+    Error: ModuleNotFoundError: No module named 'keras'
+  image_classification_from_scratch   framework_rules_only   s1 -> preflight/import_check  [19309/10763 tok, $0.1672]
+  Preflight [eval-client]: PASS  (3.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7095  steps=40  n=160  16.33s
+  Aggregated loss: 0.7095  (16.39s)
+
+FL training complete.
+  image_classification_from_scratch   schema_sys_prohibit    s0 -> PASS  [74300/15679 tok, $0.2879]
+  Preflight [eval-client]: PASS  (3.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7359  steps=40  n=160  17.19s
+  Aggregated loss: 0.7359  (17.24s)
+
+FL training complete.
+  image_classification_from_scratch   schema_sys_prohibit    s1 -> PASS  [74300/12765 tok, $0.2138]
+  Preflight [eval-client]: PASS  (1.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.5327  steps=40  n=160  0.25s
+  Aggregated loss: 4.5327  (0.25s)
+
+FL training complete.
+  lstm_seq2seq                        schema_sys             s0 -> PASS  [13669/11041 tok, $0.1697]
+  Preflight [eval-client]: PASS  (1.5s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.5373  steps=2000  n=8000  6.14s
+  Aggregated loss: 4.5373  (6.24s)
+
+FL training complete.
+  lstm_seq2seq                        schema_sys             s1 -> PASS  [13669/12773 tok, $0.1957]
+  Preflight [eval-client]: PASS  (1.9s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.5332  steps=2000  n=8000  15.71s
+  Aggregated loss: 4.5332  (15.91s)
+
+FL training complete.
+  lstm_seq2seq                        schema_user            s0 -> PASS  [19829/7455 tok, $0.1481]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.5368  steps=52  n=205  0.21s
+  Aggregated loss: 4.5368  (0.21s)
+
+FL training complete.
+  lstm_seq2seq                        schema_user            s1 -> PASS  [19829/5686 tok, $0.0912]
+  Preflight [eval-client]: PASS  (1.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.5339  steps=45  n=180  0.23s
+  Aggregated loss: 4.5339  (0.23s)
+
+FL training complete.
+  lstm_seq2seq                        schema_sys_exemplar    s0 -> PASS  [15785/8838 tok, $0.1766]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.5337  steps=45  n=180  0.31s
+  Aggregated loss: 4.5337  (0.31s)
+
+FL training complete.
+  lstm_seq2seq                        schema_sys_exemplar    s1 -> PASS  [15253/7872 tok, $0.1589]
+  Preflight [eval-client]: FAIL at [forward_pass]  (1.1s)
+    Error: ValueError: num_encoder_tokens and num_decoder_tokens must be provided in config['model_kwargs'] when data_path is unavailable.
+  lstm_seq2seq                        exemplar_invariants    s0 -> preflight/forward_pass  [21570/6988 tok, $0.1515]
+  Preflight [eval-client]: FAIL at [forward_pass]  (1.2s)
+    Error: TypeError: Seq2SeqLSTM.__init__() missing 2 required positional arguments: 'num_encoder_tokens' and 'num_decoder_tokens'
+  lstm_seq2seq                        exemplar_invariants    s1 -> preflight/forward_pass  [21570/7600 tok, $0.1205]
+  Preflight [eval-client]: FAIL at [import_check]  (0.1s)
+    Error: ModuleNotFoundError: No module named 'keras'
+  lstm_seq2seq                        framework_rules_only   s0 -> preflight/import_check  [19503/7712 tok, $0.1500]
+  Preflight [eval-client]: FAIL at [import_check]  (0.1s)
+    Error: ModuleNotFoundError: No module named 'keras'
+  lstm_seq2seq                        framework_rules_only   s1 -> preflight/import_check  [19503/8106 tok, $0.1274]
+  Preflight [eval-client]: PASS  (1.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=4.5341  steps=40  n=160  0.17s
+  Aggregated loss: 4.5341  (0.17s)
+
+FL training complete.
+  lstm_seq2seq                        schema_sys_prohibit    s0 -> PASS  [74494/10222 tok, $0.2040]
+  Preflight [eval-client]: FAIL at [import_check]  (0.1s)
+    Error: ModuleNotFoundError: No module named 'keras'
+  lstm_seq2seq                        schema_sys_prohibit    s1 -> preflight/import_check  [13688/11017 tok, $0.1966]
+  Preflight [eval-client]: PASS  (1.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2153  steps=12000  n=48000  20.04s
+  Aggregated loss: 0.2153  (20.05s)
+
+FL training complete.
+  mnist_convnet                       schema_sys             s0 -> PASS  [11335/5173 tok, $0.0810]
+  Preflight [eval-client]: PASS  (2.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2169  steps=13500  n=54000  20.11s
+  Aggregated loss: 0.2169  (20.13s)
+
+FL training complete.
+  mnist_convnet                       schema_sys             s1 -> PASS  [11335/8268 tok, $0.1274]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2227  steps=13500  n=54000  19.15s
+  Aggregated loss: 0.2227  (19.16s)
+
+FL training complete.
+  mnist_convnet                       schema_user            s0 -> PASS  [17495/3120 tok, $0.0691]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2059  steps=13500  n=54000  18.65s
+  Aggregated loss: 0.2059  (18.68s)
+
+FL training complete.
+  mnist_convnet                       schema_user            s1 -> PASS  [78301/4328 tok, $0.1065]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2421  steps=13500  n=54000  19.77s
+  Aggregated loss: 0.2421  (19.79s)
+
+FL training complete.
+  mnist_convnet                       schema_sys_exemplar    s0 -> PASS  [13451/5287 tok, $0.1093]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2357  steps=13500  n=54000  22.46s
+  Aggregated loss: 0.2357  (22.47s)
+
+FL training complete.
+  mnist_convnet                       schema_sys_exemplar    s1 -> PASS  [13451/6400 tok, $0.1000]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2232  steps=13500  n=54000  21.59s
+  Aggregated loss: 0.2232  (21.62s)
+
+FL training complete.
+  mnist_convnet                       exemplar_invariants    s0 -> PASS  [19236/5619 tok, $0.1170]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2218  steps=13500  n=54000  19.05s
+  Aggregated loss: 0.2218  (19.07s)
+
+FL training complete.
+  mnist_convnet                       exemplar_invariants    s1 -> PASS  [19236/4179 tok, $0.0685]
+  Preflight [eval-client]: FAIL at [import_check]  (0.1s)
+    Error: ModuleNotFoundError: No module named 'keras'
+  mnist_convnet                       framework_rules_only   s0 -> preflight/import_check  [17169/3853 tok, $0.0781]
+  Preflight [eval-client]: FAIL at [import_check]  (0.1s)
+    Error: ModuleNotFoundError: No module named 'keras'
+  mnist_convnet                       framework_rules_only   s1 -> preflight/import_check  [17169/4690 tok, $0.0755]
+  Preflight [eval-client]: PASS  (1.2s)
+<frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2277  steps=13500  n=54000  20.53s
+  Aggregated loss: 0.2277  (20.55s)
+
+FL training complete.
+  mnist_convnet                       schema_sys_prohibit    s0 -> PASS  [11354/4184 tok, $0.0801]
+  Preflight [eval-client]: PASS  (1.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.2270  steps=13500  n=54000  26.89s
+  Aggregated loss: 0.2270  (26.9s)
+
+FL training complete.
+  mnist_convnet                       schema_sys_prohibit    s1 -> PASS  [11354/6672 tok, $0.1035]
+  Preflight [eval-client]: PASS  (14.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.6620  steps=4  n=16  9.75s
+  Aggregated loss: 0.6620  (9.79s)
+
+FL training complete.
+  mednist_tutorial                    schema_sys             s0 -> PASS  [73470/14952 tok, $0.2463]
+  Preflight [eval-client]: FAIL at [forward_pass]  (5.3s)
+    Error: AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  mednist_tutorial                    schema_sys             s1 -> preflight/forward_pass  [12664/10363 tok, $0.1592]
+  Preflight [eval-client]: FAIL at [forward_pass]  (6.0s)
+    Error: AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  mednist_tutorial                    schema_user            s0 -> preflight/forward_pass  [18824/6686 tok, $0.1305]
+  Preflight [eval-client]: PASS  (10.9s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.7956  steps=4  n=16  9.75s
+  Aggregated loss: 0.7956  (9.85s)
+
+FL training complete.
+  mednist_tutorial                    schema_user            s1 -> PASS  [18824/4764 tok, $0.0771]
+  Preflight [eval-client]: FAIL at [forward_pass]  (6.2s)
+    Error: IndexError: Target 5 is out of bounds.
+  mednist_tutorial                    schema_sys_exemplar    s0 -> preflight/forward_pass  [75586/5965 tok, $0.1468]
+  Preflight [eval-client]: FAIL at [forward_pass]  (6.2s)
+    Error: IndexError: Target 7 is out of bounds.
+  mednist_tutorial                    schema_sys_exemplar    s1 -> preflight/forward_pass  [75586/13814 tok, $0.2299]
+  Preflight [eval-client]: PASS  (13.7s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.1621  steps=10  n=40  32.77s
+  Aggregated loss: 0.1621  (32.82s)
+
+FL training complete.
+  mednist_tutorial                    exemplar_invariants    s0 -> PASS  [20565/4320 tok, $0.1055]
+  Preflight [eval-client]: FAIL at [forward_pass]  (6.3s)
+    Error: IndexError: Target 7 is out of bounds.
+  mednist_tutorial                    exemplar_invariants    s1 -> preflight/forward_pass  [20565/2393 tok, $0.0421]
+  Preflight [eval-client]: FAIL at [data_load]  (5.3s)
+    Error: FileNotFoundError: [Errno 2] No such file or directory: './labels.npy'
+  mednist_tutorial                    framework_rules_only   s0 -> preflight/data_load  [18498/4514 tok, $0.0960]
+  Preflight [eval-client]: FAIL at [data_load]  (6.0s)
+    Error: FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 0.
+  mednist_tutorial                    framework_rules_only   s1 -> preflight/data_load  [18498/7991 tok, $0.1254]
+  Preflight [eval-client]: FAIL at [forward_pass]  (6.4s)
+    Error: AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  mednist_tutorial                    schema_sys_prohibit    s0 -> preflight/forward_pass  [12683/9150 tok, $0.1626]
+  Preflight [eval-client]: PASS  (11.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.6858  steps=4  n=16  9.58s
+  Aggregated loss: 0.6858  (9.61s)
+
+FL training complete.
+  mednist_tutorial                    schema_sys_prohibit    s1 -> PASS  [12683/9771 tok, $0.1504]
+  Preflight [eval-client]: PASS  (17.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5428  steps=8  n=128  32.46s
+  Aggregated loss: 0.5428  (32.49s)
+
+FL training complete.
+  spleen_segmentation_3d              schema_sys             s0 -> PASS  [13062/6309 tok, $0.0986]
+  Preflight [eval-client]: PASS  (17.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5132  steps=8  n=128  32.08s
+  Aggregated loss: 0.5132  (32.11s)
+
+FL training complete.
+  spleen_segmentation_3d              schema_sys             s1 -> PASS  [13062/7778 tok, $0.1206]
+  Preflight [eval-client]: PASS  (17.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5060  steps=8  n=128  31.33s
+  Aggregated loss: 0.5060  (31.36s)
+
+FL training complete.
+  spleen_segmentation_3d              schema_user            s0 -> PASS  [80028/6692 tok, $0.1523]
+  Preflight [eval-client]: PASS  (20.6s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5442  steps=8  n=128  32.65s
+  Aggregated loss: 0.5442  (32.68s)
+
+FL training complete.
+  spleen_segmentation_3d              schema_user            s1 -> PASS  [19222/5926 tok, $0.1215]
+  Preflight [eval-client]: PASS  (17.8s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5380  steps=8  n=128  35.0s
+  Aggregated loss: 0.5380  (35.02s)
+
+FL training complete.
+  spleen_segmentation_3d              schema_sys_exemplar    s0 -> PASS  [75984/7083 tok, $0.1660]
+  Preflight [eval-client]: PASS  (15.3s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.6180  steps=8  n=128  38.0s
+  Aggregated loss: 0.6180  (38.01s)
+
+FL training complete.
+  spleen_segmentation_3d              schema_sys_exemplar    s1 -> PASS  [75984/10081 tok, $0.1740]
+  Preflight [eval-client]: PASS  (15.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.6503  steps=8  n=128  33.58s
+  Aggregated loss: 0.6503  (33.6s)
+
+FL training complete.
+  spleen_segmentation_3d              exemplar_invariants    s0 -> PASS  [20963/4784 tok, $0.1148]
+  Preflight [eval-client]: PASS  (15.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5179  steps=5  n=80  20.85s
+  Aggregated loss: 0.5179  (20.86s)
+
+FL training complete.
+  spleen_segmentation_3d              exemplar_invariants    s1 -> PASS  [81769/4412 tok, $0.1286]
+  Preflight [eval-client]: FAIL at [forward_pass]  (7.5s)
+    Error: AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  spleen_segmentation_3d              framework_rules_only   s0 -> preflight/forward_pass  [18896/3787 tok, $0.0875]
+  Preflight [eval-client]: FAIL at [forward_pass]  (7.4s)
+    Error: AttributeError: 'NoneType' object has no attribute 'zero_grad'
+  spleen_segmentation_3d              framework_rules_only   s1 -> preflight/forward_pass  [18896/5632 tok, $0.0902]
+  Preflight [eval-client]: PASS  (17.4s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.6036  steps=8  n=128  31.56s
+  Aggregated loss: 0.6036  (31.59s)
+
+FL training complete.
+  spleen_segmentation_3d              schema_sys_prohibit    s0 -> PASS  [10839/7315 tok, $0.1748]
+  Preflight [eval-client]: PASS  (17.8s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.5149  steps=8  n=128  31.58s
+  Aggregated loss: 0.5149  (31.62s)
+
+FL training complete.
+  spleen_segmentation_3d              schema_sys_prohibit    s1 -> PASS  [13081/8444 tok, $0.1544]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           schema_sys             s0 -> preflight/import_check  [12042/4818 tok, $0.0759]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           schema_sys             s1 -> preflight/import_check  [72848/5717 tok, $0.1267]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           schema_user            s0 -> preflight/import_check  [18202/3459 tok, $0.0784]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           schema_user            s1 -> preflight/import_check  [79008/2566 tok, $0.0843]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.8728  steps=13500  n=54000  9.77s
+  Aggregated loss: 1.8728  (9.79s)
+
+FL training complete.
+  backbone_image_classifier           schema_sys_exemplar    s0 -> PASS  [14158/4107 tok, $0.0959]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.2263  steps=13500  n=54000  9.11s
+  Aggregated loss: 1.2263  (9.13s)
+
+FL training complete.
+  backbone_image_classifier           schema_sys_exemplar    s1 -> PASS  [74964/4076 tok, $0.1147]
+  Preflight [eval-client]: PASS  (1.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.1013  steps=13750  n=55000  9.33s
+  Aggregated loss: 1.1013  (9.35s)
+
+FL training complete.
+  backbone_image_classifier           exemplar_invariants    s0 -> PASS  [80558/4268 tok, $0.1191]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.6015  steps=13750  n=55000  9.28s
+  Aggregated loss: 1.6015  (9.29s)
+
+FL training complete.
+  backbone_image_classifier           exemplar_invariants    s1 -> PASS  [80749/3606 tok, $0.1104]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           framework_rules_only   s0 -> preflight/import_check  [78682/1794 tok, $0.0708]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           framework_rules_only   s1 -> preflight/import_check  [17876/3666 tok, $0.0795]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           schema_sys_prohibit    s0 -> preflight/import_check  [72867/5042 tok, $0.1197]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  backbone_image_classifier           schema_sys_prohibit    s1 -> preflight/import_check  [72867/3822 tok, $0.0792]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0060  steps=13500  n=54000  85.13s
+  Aggregated loss: 1.0060  (85.15s)
+
+FL training complete.
+  mnist_lite                          schema_sys             s0 -> PASS  [73776/8061 tok, $0.1431]
+  Preflight [eval-client]: PASS  (1.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.4650  steps=225  n=900  1.07s
+  Aggregated loss: 1.4650  (1.07s)
+
+FL training complete.
+  mnist_lite                          schema_sys             s1 -> PASS  [12970/10222 tok, $0.1572]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0026  steps=13500  n=54000  76.56s
+  Aggregated loss: 1.0026  (76.58s)
+
+FL training complete.
+  mnist_lite                          schema_user            s0 -> PASS  [79936/4002 tok, $0.1114]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=0.9990  steps=13500  n=54000  75.86s
+  Aggregated loss: 0.9990  (75.88s)
+
+FL training complete.
+  mnist_lite                          schema_user            s1 -> PASS  [19130/4043 tok, $0.0927]
+  Preflight [eval-client]: PASS  (1.2s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0034  steps=13500  n=54000  74.81s
+  Aggregated loss: 1.0034  (74.83s)
+
+FL training complete.
+  mnist_lite                          schema_sys_exemplar    s0 -> PASS  [15086/6078 tok, $0.1310]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0021  steps=13500  n=54000  87.51s
+  Aggregated loss: 1.0021  (87.52s)
+
+FL training complete.
+  mnist_lite                          schema_sys_exemplar    s1 -> PASS  [15086/9717 tok, $0.1503]
+  Preflight [eval-client]: PASS  (1.3s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0015  steps=15000  n=60000  82.16s
+  Aggregated loss: 1.0015  (82.18s)
+
+FL training complete.
+  mnist_lite                          exemplar_invariants    s0 -> PASS  [20871/6554 tok, $0.1408]
+  Preflight [eval-client]: PASS  (1.3s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0073  steps=15000  n=60000  96.62s
+  Aggregated loss: 1.0073  (96.65s)
+
+FL training complete.
+  mnist_lite                          exemplar_invariants    s1 -> PASS  [20871/6744 tok, $0.1074]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  mnist_lite                          framework_rules_only   s0 -> preflight/import_check  [18804/6774 tok, $0.1317]
+  Preflight [eval-client]: FAIL at [import_check]  (1.1s)
+    Error: ModuleNotFoundError: No module named 'lightning'
+  mnist_lite                          framework_rules_only   s1 -> preflight/import_check  [18804/4749 tok, $0.0769]
+  Preflight [eval-client]: PASS  (2.0s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0054  steps=13500  n=54000  88.96s
+  Aggregated loss: 1.0054  (88.98s)
+
+FL training complete.
+  mnist_lite                          schema_sys_prohibit    s0 -> PASS  [12989/7916 tok, $0.1459]
+  Preflight [eval-client]: PASS  (2.1s)
+  Preflight [eval-site-1]: PASS
+
+Starting FL: 1 rounds, 1 clients
+==================================================
+
+Round 1/1
+    [eval-site-1] loss=1.0058  steps=13500  n=54000  73.42s
+  Aggregated loss: 1.0058  (73.43s)
+
+FL training complete.
+  mnist_lite                          schema_sys_prohibit    s1 -> PASS  [12989/5667 tok, $0.0889]
+[ablation] done. live calls: 119. rows -> results/ablation_claude.csv
+[ablation] provider=claude conditions=['schema_sys', 'schema_user', 'schema_sys_exemplar', 'exemplar_invariants', 'framework_rules_only', 'schema_sys_prohibit'] samples=2 scripts=10 -> 120 generations; dry_run=False max_calls=None
+  dcgan_main                          schema_sys             s0 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          schema_sys             s1 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          schema_user            s0 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          schema_user            s1 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          schema_sys_exemplar    s0 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          schema_sys_exemplar    s1 -> PASS  [-1/-1 tok, $nan]
+  dcgan_main                          exemplar_invariants    s0 -> PASS  [22153/7370 tok, $0.1608]
+  dcgan_main                          exemplar_invariants    s1 -> preflight/forward_pass  [22153/13228 tok, $0.2051]
+  dcgan_main                          framework_rules_only   s0 -> preflight/data_load  [80892/5915 tok, $0.1459]
+  dcgan_main                          framework_rules_only   s1 -> preflight/forward_pass  [20086/6245 tok, $0.1315]
+  dcgan_main                          schema_sys_prohibit    s0 -> PASS  [14271/8845 tok, $0.1707]
+  dcgan_main                          schema_sys_prohibit    s1 -> PASS  [14271/10759 tok, $0.1657]
+  imagenet_main                       schema_sys             s0 -> preflight/data_load  [77543/9578 tok, $0.2127]
+  imagenet_main                       schema_sys             s1 -> PASS  [16737/10383 tok, $0.1608]
+  imagenet_main                       schema_user            s0 -> PASS  [22897/12806 tok, $0.2468]
+  imagenet_main                       schema_user            s1 -> PASS  [22897/8325 tok, $0.1317]
+  imagenet_main                       schema_sys_exemplar    s0 -> PASS  [-1/-1 tok, $nan]
+  imagenet_main                       schema_sys_exemplar    s1 -> PASS  [-1/-1 tok, $nan]
+  imagenet_main                       exemplar_invariants    s0 -> PASS  [-1/-1 tok, $nan]
+  imagenet_main                       exemplar_invariants    s1 -> PASS  [-1/-1 tok, $nan]
+  imagenet_main                       framework_rules_only   s0 -> preflight/data_load  [-1/-1 tok, $nan]
+  imagenet_main                       framework_rules_only   s1 -> preflight/data_load  [-1/-1 tok, $nan]
+  imagenet_main                       schema_sys_prohibit    s0 -> PASS  [-1/-1 tok, $nan]
+  imagenet_main                       schema_sys_prohibit    s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          schema_sys             s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          schema_sys             s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          schema_user            s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          schema_user            s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          schema_sys_exemplar    s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          schema_sys_exemplar    s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          exemplar_invariants    s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          exemplar_invariants    s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          framework_rules_only   s0 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mnist_main                          framework_rules_only   s1 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mnist_main                          schema_sys_prohibit    s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_main                          schema_sys_prohibit    s1 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   schema_sys             s0 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   schema_sys             s1 -> preflight/data_load  [-1/-1 tok, $nan]
+  image_classification_from_scratch   schema_user            s0 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   schema_user            s1 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   schema_sys_exemplar    s0 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   schema_sys_exemplar    s1 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   exemplar_invariants    s0 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   exemplar_invariants    s1 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   framework_rules_only   s0 -> preflight/import_check  [-1/-1 tok, $nan]
+  image_classification_from_scratch   framework_rules_only   s1 -> preflight/import_check  [-1/-1 tok, $nan]
+  image_classification_from_scratch   schema_sys_prohibit    s0 -> PASS  [-1/-1 tok, $nan]
+  image_classification_from_scratch   schema_sys_prohibit    s1 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        schema_sys             s0 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        schema_sys             s1 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        schema_user            s0 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        schema_user            s1 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        schema_sys_exemplar    s0 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        schema_sys_exemplar    s1 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        exemplar_invariants    s0 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  lstm_seq2seq                        exemplar_invariants    s1 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  lstm_seq2seq                        framework_rules_only   s0 -> preflight/import_check  [-1/-1 tok, $nan]
+  lstm_seq2seq                        framework_rules_only   s1 -> preflight/import_check  [-1/-1 tok, $nan]
+  lstm_seq2seq                        schema_sys_prohibit    s0 -> PASS  [-1/-1 tok, $nan]
+  lstm_seq2seq                        schema_sys_prohibit    s1 -> preflight/import_check  [-1/-1 tok, $nan]
+  mnist_convnet                       schema_sys             s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       schema_sys             s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       schema_user            s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       schema_user            s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       schema_sys_exemplar    s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       schema_sys_exemplar    s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       exemplar_invariants    s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       exemplar_invariants    s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       framework_rules_only   s0 -> preflight/import_check  [-1/-1 tok, $nan]
+  mnist_convnet                       framework_rules_only   s1 -> preflight/import_check  [-1/-1 tok, $nan]
+  mnist_convnet                       schema_sys_prohibit    s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_convnet                       schema_sys_prohibit    s1 -> PASS  [-1/-1 tok, $nan]
+  mednist_tutorial                    schema_sys             s0 -> PASS  [-1/-1 tok, $nan]
+  mednist_tutorial                    schema_sys             s1 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mednist_tutorial                    schema_user            s0 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mednist_tutorial                    schema_user            s1 -> PASS  [-1/-1 tok, $nan]
+  mednist_tutorial                    schema_sys_exemplar    s0 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mednist_tutorial                    schema_sys_exemplar    s1 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mednist_tutorial                    exemplar_invariants    s0 -> PASS  [-1/-1 tok, $nan]
+  mednist_tutorial                    exemplar_invariants    s1 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mednist_tutorial                    framework_rules_only   s0 -> preflight/data_load  [-1/-1 tok, $nan]
+  mednist_tutorial                    framework_rules_only   s1 -> preflight/data_load  [-1/-1 tok, $nan]
+  mednist_tutorial                    schema_sys_prohibit    s0 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mednist_tutorial                    schema_sys_prohibit    s1 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              schema_sys             s0 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              schema_sys             s1 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              schema_user            s0 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              schema_user            s1 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              schema_sys_exemplar    s0 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              schema_sys_exemplar    s1 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              exemplar_invariants    s0 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              exemplar_invariants    s1 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              framework_rules_only   s0 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              framework_rules_only   s1 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              schema_sys_prohibit    s0 -> PASS  [-1/-1 tok, $nan]
+  spleen_segmentation_3d              schema_sys_prohibit    s1 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           schema_sys             s0 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           schema_sys             s1 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           schema_user            s0 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           schema_user            s1 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           schema_sys_exemplar    s0 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           schema_sys_exemplar    s1 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           exemplar_invariants    s0 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           exemplar_invariants    s1 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           framework_rules_only   s0 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  backbone_image_classifier           framework_rules_only   s1 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  backbone_image_classifier           schema_sys_prohibit    s0 -> PASS  [-1/-1 tok, $nan]
+  backbone_image_classifier           schema_sys_prohibit    s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          schema_sys             s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          schema_sys             s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          schema_user            s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          schema_user            s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          schema_sys_exemplar    s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          schema_sys_exemplar    s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          exemplar_invariants    s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          exemplar_invariants    s1 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          framework_rules_only   s0 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mnist_lite                          framework_rules_only   s1 -> preflight/forward_pass  [-1/-1 tok, $nan]
+  mnist_lite                          schema_sys_prohibit    s0 -> PASS  [-1/-1 tok, $nan]
+  mnist_lite                          schema_sys_prohibit    s1 -> PASS  [-1/-1 tok, $nan]
+[ablation] done. live calls: 10. rows -> results/ablation_claude.csv

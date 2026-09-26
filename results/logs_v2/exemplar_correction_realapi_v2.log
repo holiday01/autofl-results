@@ -1,0 +1,20 @@
+Provider: gemini  |  Skill: FEW_SHOT_CORRECTED
+script                                    orig_e2e    drun_e2e    real_e2e    real_err_stage
+--------------------------------------------------------------------------------------------------------------
+  pytorch/dcgan_main                      False       True        False       preflight/import_check
+  pytorch/imagenet_main                   False       False       False       preflight/data_load
+  pytorch/mnist_main                      False       True        True        
+  tensorflow/image_classification_from_scratch  False       False       False       preflight/import_check
+  tensorflow/lstm_seq2seq                 False       False       False       preflight/import_check
+  tensorflow/mnist_convnet                False       False       False       preflight/import_check
+  monai/mednist_tutorial                  False       False       False       preflight/data_load
+  monai/spleen_segmentation_3d            False       False       True        
+  lightning/backbone_image_classifier     False       True        True        
+  lightning/mnist_lite                    True        True        True        
+
+Saved 10 rows -> results/exemplar_correction_realapi_v2.csv
+
+=== Summary ===
+Original few-shot e2e success:                 1/10
+Dry-run corrected-exemplar e2e (upper bound):  4/10
+Real-API corrected-exemplar e2e (gemini ):  4/10

@@ -1,0 +1,63 @@
+script_name,framework,method,syntax_valid,interface_complete,build_model_present,build_dataloader_present,train_step_present,optimizer_detected,component_coverage,preflight_pass,e2e_runnable,error_stage,error_message,elapsed_sec
+mlp_digits,sklearn,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validat",0.4
+mlp_digits,sklearn,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'NoneType' object has no attribute 'zero_grad'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 155, in _stage_forward_pass
+    loss = ",0.03
+mlp_digits,sklearn,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/backward_pass,"RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 179, in _stage_ba",0.49
+mlp_digits,sklearn,structured,True,True,True,True,True,True,1.0,True,True,,,12.14
+svm_iris,sklearn,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validat",0.05
+svm_iris,sklearn,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'SGDClassifier' object has no attribute 'to'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 146, in _stage_forward_pass
+    model = m",0.02
+svm_iris,sklearn,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'SVC' object has no attribute 'to'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 146, in _stage_forward_pass
+    model = model.to(de",0.02
+svm_iris,sklearn,structured,True,True,True,True,True,True,1.0,True,True,,,7.86
+xgb_breast_cancer,xgboost,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validat",0.06
+xgb_breast_cancer,xgboost,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'XGBClassifier' object has no attribute 'to'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 146, in _stage_forward_pass
+    model = m",0.03
+xgb_breast_cancer,xgboost,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'XGBClassifier' object has no attribute 'to'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 146, in _stage_forward_pass
+    model = m",0.04
+xgb_breast_cancer,xgboost,structured,True,True,True,True,True,True,1.0,True,True,,,26.38

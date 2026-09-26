@@ -1,0 +1,201 @@
+script_name,framework,method,syntax_valid,interface_complete,build_model_present,build_dataloader_present,train_step_present,optimizer_detected,component_coverage,preflight_pass,e2e_runnable,error_stage,error_message,elapsed_sec
+dcgan_main,pytorch,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validat",0.39
+dcgan_main,pytorch,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"KeyError: 'dataset'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 135, in _stage_data_load
+    dl = mod.build_dataloader(self.config, split=""train"")",0.02
+dcgan_main,pytorch,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/backward_pass,"RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 179, in _stage_ba",0.16
+dcgan_main,pytorch,structured,True,True,True,True,True,True,1.0,True,True,,,339.75
+imagenet_main,pytorch,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validat",0.02
+imagenet_main,pytorch,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"FileNotFoundError: [Errno 2] No such file or directory: 'imagenet/train'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 135, in _stage_data_load
+    ",0.02
+imagenet_main,pytorch,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"FileNotFoundError: [Errno 2] No such file or directory: './train'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 135, in _stage_data_load
+    dl = mo",0.02
+mnist_main,pytorch,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validat",0.02
+mnist_main,pytorch,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'NoneType' object has no attribute 'zero_grad'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 155, in _stage_forward_pass
+    loss = ",0.11
+mnist_main,pytorch,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/backward_pass,"RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 179, in _stage_ba",0.27
+mnist_main,pytorch,structured,True,True,True,True,True,True,1.0,True,True,,,181.25
+image_classification_from_scratch,tensorflow,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 134, in _stage_data_load
+    mod = self._load_fl_module()",0.02
+image_classification_from_scratch,tensorflow,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 134, in _stage_data_load
+    mod = self._load_fl_module()",0.02
+image_classification_from_scratch,tensorflow,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 134, in _stage_data_load
+    mod = self._load_fl_module()",0.02
+lstm_seq2seq,tensorflow,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 134, in _stage_data_load
+    mod = self._load_fl_module()",0.02
+lstm_seq2seq,tensorflow,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 134, in _stage_data_load
+    mod = self._load_fl_module()",0.02
+lstm_seq2seq,tensorflow,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 134, in _stage_data_load
+    mod = self._load_fl_module()",0.02
+lstm_seq2seq,tensorflow,structured,True,True,True,True,True,True,1.0,True,True,,,0.28
+mnist_convnet,tensorflow,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 134, in _stage_data_load
+    mod = self._load_fl_module()",0.02
+mnist_convnet,tensorflow,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 134, in _stage_data_load
+    mod = self._load_fl_module()",0.02
+mnist_convnet,tensorflow,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ModuleNotFoundError: No module named 'keras'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 134, in _stage_data_load
+    mod = self._load_fl_module()",0.02
+mnist_convnet,tensorflow,structured,True,True,True,True,True,True,1.0,True,True,,,18.23
+mednist_tutorial,monai,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validat",1.36
+mednist_tutorial,monai,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"RuntimeError: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File ""/home/holiday01/miniconda/lib/python3.13/site-packages/torch/utils/data/_utils/worker.py"", line 358, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefine",0.05
+mednist_tutorial,monai,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ValueError: num_samples should be a positive integer value, but got num_samples=0
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 135, in _stage_data_",10.04
+spleen_segmentation_3d,monai,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ModuleNotFoundError: No module named 'nibabel'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 134, in _stage_data_load
+    mod = self._load_fl_module",0.02
+spleen_segmentation_3d,monai,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"KeyError: 'data_dir'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 135, in _stage_data_load
+    dl = mod.build_dataloader(self.config, split=""train""",0.02
+spleen_segmentation_3d,monai,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"ModuleNotFoundError: No module named 'nibabel'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 134, in _stage_data_load
+    mod = self._load_fl_module",0.02
+backbone_image_classifier,lightning,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validat",0.28
+backbone_image_classifier,lightning,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/forward_pass,"AttributeError: 'NoneType' object has no attribute 'zero_grad'
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 155, in _stage_forward_pass
+    loss = ",0.06
+backbone_image_classifier,lightning,few_shot,True,True,True,True,True,True,1.0,False,False,preflight/backward_pass,"RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 179, in _stage_ba",0.12
+mnist_lite,lightning,ast,True,True,True,True,True,True,1.0,False,False,preflight/data_load,"NotImplementedError: build_dataloader: no Dataset class detected — edit the generated file and replace this block.
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validat",0.02
+backbone_image_classifier,lightning,structured,True,True,True,True,True,True,1.0,True,True,,,552.53
+mnist_lite,lightning,zero_shot,True,True,True,True,True,True,1.0,False,False,preflight/backward_pass,"RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+Traceback (most recent call last):
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 86, in run
+    fn(result)
+    ~~^^^^^^^^
+  File ""/home/holiday01/autofl/preflight/validator.py"", line 179, in _stage_ba",0.17
+mnist_lite,lightning,few_shot,True,True,True,True,True,True,1.0,True,True,,,75.53
+mnist_lite,lightning,structured,True,True,True,True,True,True,1.0,True,True,,,72.29
+imagenet_main,pytorch,structured,True,True,True,True,True,True,1.0,True,True,,,4.67
+image_classification_from_scratch,tensorflow,structured,True,True,True,True,True,True,1.0,True,True,,,4.46
+mednist_tutorial,monai,structured,True,True,True,True,True,True,1.0,True,True,,,11.69
+spleen_segmentation_3d,monai,structured,True,True,True,True,True,True,1.0,True,True,,,4.71

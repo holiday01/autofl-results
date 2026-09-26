@@ -1,0 +1,44 @@
+/home/holiday01/autofl/eval/non_iid_accuracy.py:81: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments.
+  train_targets = np.array(train_ds.targets)
+Loading MNIST...
+Train: 60000, Test: 10000
+torch.cuda.is_available()=True
+
+IID partition sizes: [20000, 20000, 20000]
+
+[IID] Round 0 (init) acc_overall=0.0842 acc_macro=0.0861
+  [IID] Round 1 loss=0.3217 acc_overall=0.9733 acc_macro=0.9731 n={'site-1': 20000, 'site-2': 20000, 'site-3': 20000} (7.78s)
+  [IID] Round 2 loss=0.1430 acc_overall=0.9843 acc_macro=0.9842 n={'site-1': 20000, 'site-2': 20000, 'site-3': 20000} (8.97s)
+  [IID] Round 3 loss=0.1050 acc_overall=0.9886 acc_macro=0.9885 n={'site-1': 20000, 'site-2': 20000, 'site-3': 20000} (7.67s)
+  [IID] Round 4 loss=0.0897 acc_overall=0.9901 acc_macro=0.9900 n={'site-1': 20000, 'site-2': 20000, 'site-3': 20000} (9.89s)
+  [IID] Round 5 loss=0.0769 acc_overall=0.9894 acc_macro=0.9893 n={'site-1': 20000, 'site-2': 20000, 'site-3': 20000} (9.36s)
+
+Dirichlet 0.5 partition sizes: [16986, 23249, 19765]
+
+[Dir_0.5] Round 0 (init) acc_overall=0.0842 acc_macro=0.0861
+  [Dir_0.5] Round 1 loss=0.2612 acc_overall=0.9390 acc_macro=0.9390 n={'site-1': 16986, 'site-2': 23249, 'site-3': 19765} (11.26s)
+  [Dir_0.5] Round 2 loss=0.1257 acc_overall=0.9699 acc_macro=0.9698 n={'site-1': 16986, 'site-2': 23249, 'site-3': 19765} (11.56s)
+  [Dir_0.5] Round 3 loss=0.0929 acc_overall=0.9808 acc_macro=0.9807 n={'site-1': 16986, 'site-2': 23249, 'site-3': 19765} (8.19s)
+  [Dir_0.5] Round 4 loss=0.0796 acc_overall=0.9809 acc_macro=0.9808 n={'site-1': 16986, 'site-2': 23249, 'site-3': 19765} (10.96s)
+  [Dir_0.5] Round 5 loss=0.0681 acc_overall=0.9855 acc_macro=0.9855 n={'site-1': 16986, 'site-2': 23249, 'site-3': 19765} (12.31s)
+
+Dirichlet 0.1 partition sizes: [18063, 23662, 18275]
+
+[Dir_0.1] Round 0 (init) acc_overall=0.0842 acc_macro=0.0861
+  [Dir_0.1] Round 1 loss=0.1320 acc_overall=0.7414 acc_macro=0.7442 n={'site-1': 18063, 'site-2': 23662, 'site-3': 18275} (7.04s)
+  [Dir_0.1] Round 2 loss=0.0778 acc_overall=0.7887 acc_macro=0.7925 n={'site-1': 18063, 'site-2': 23662, 'site-3': 18275} (11.08s)
+  [Dir_0.1] Round 3 loss=0.0604 acc_overall=0.8583 acc_macro=0.8611 n={'site-1': 18063, 'site-2': 23662, 'site-3': 18275} (11.21s)
+  [Dir_0.1] Round 4 loss=0.0523 acc_overall=0.8764 acc_macro=0.8793 n={'site-1': 18063, 'site-2': 23662, 'site-3': 18275} (13.44s)
+  [Dir_0.1] Round 5 loss=0.0439 acc_overall=0.8797 acc_macro=0.8827 n={'site-1': 18063, 'site-2': 23662, 'site-3': 18275} (9.38s)
+
+Saved: fl_results/v2/non_iid_accuracy_results.json
+
+=== Per-Round Test Accuracy (overall / macro) ===
+Round   IID                       Dirichlet_0.5             Dirichlet_0.1             
+R0       8.42% /  8.61%       8.42% /  8.61%       8.42% /  8.61%      
+R1      97.33% / 97.31%      93.90% / 93.90%      74.14% / 74.42%      
+R2      98.43% / 98.42%      96.99% / 96.98%      78.87% / 79.25%      
+R3      98.86% / 98.85%      98.08% / 98.07%      85.83% / 86.11%      
+R4      99.01% / 99.00%      98.09% / 98.08%      87.64% / 87.93%      
+R5      98.94% / 98.92%      98.55% / 98.55%      87.97% / 88.27%      
+Notes saved: fl_results/v2/non_iid_accuracy_notes.md
