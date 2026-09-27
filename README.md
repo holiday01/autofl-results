@@ -65,7 +65,7 @@ CC-BY-4.0.
 ```bibtex
 @misc{autofl_results_2026,
   title  = {AutoFL: Experimental Results and Figures},
-  author = {Chiu, Yen-Jung and Chuang, Chao-Chun},
+  author = {Chiu, Yen-Jung},
   year   = {2026},
   doi    = {10.5281/zenodo.20156953},
   note   = {Version 2.0. v1.0: 10.5281/zenodo.20156954}
